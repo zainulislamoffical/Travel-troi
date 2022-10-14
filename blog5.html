@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TOURISTS GALORE - Blog</title>
+	<link rel="short icon" href="logo2.png">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="text.css">
+	<link rel="stylesheet" href="zoom.css">
+    <link rel="stylesheet" href="footerstyle.css">
+	<link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="blogin.css">
+    <style>
+		html{
+			scroll-behavior: smooth;
+		}
+		::-webkit-scrollbar{
+				width: 15px;
+			}
+			::-webkit-scrollbar-track{
+				background: #6600ff93;
+				border-radius: 1px;
+			}
+			::-webkit-scrollbar-thumb{
+				background: #00a2e29c;
+				border-radius: 50px;
+			}
+		body{
+			background:#ffffffd8 url("pex.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-blend-mode:saturation;
+		}
+        .he{
+            background-image: url(blog105.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+		.headd{
+			position: relative;
+		}
+		.headd h2{
+			color: #e6e6e6;
+			font-size: 60px;
+			position: absolute;
+			font-family: "Cooper Black";
+			/* letter-spacing: 5px; */
+			margin-left: 95px;
+			margin-top: -5px;
+			transform: translate(-50%, -50%);
+		}
+		.headd h2:nth-child(1){
+			color: transparent;
+			-webkit-text-stroke: 4px #e6e6e6;
+		} 
+		.headd h2:nth-child(2){
+			color: #00b7ff;
+			animation: animate 3s ease-in-out infinite;
+		} 
+		@keyframes animate{
+			0%,
+			100%{
+				clip-path:polygon(
+					0% 45%,
+					16% 44%,
+					33% 50%,
+					54% 60%,
+					70% 61%,
+					84% 59%,
+					100% 52%,
+					100% 100%,
+					0% 100%
+				);
+			}
+			50%{
+				clip-path:polygon(
+					0% 60%,
+					15% 65%,
+					34% 66%,
+					51% 62%,
+					67% 50%,
+					84% 45%,
+					100% 46%,
+					100% 100%,
+					0% 100%
+				);
+			}
+		}
+		@media(max-width: 1040px){
+			.headd h2{
+				margin-top:3px;
+				font-size: 40px;
+				margin-left: 60px;
+			}
+		}
+		.searche{
+            position: absolute;
+            top: 18%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #2c3441;
+            height: 60px;
+            border-radius: 100px;
+            padding: 10px;
+        }
+        .searche:hover > input{
+            width: 400px;
+            padding: 0 10px;
+        }
+        .searche:hover > .icon{
+            background: #536179;
+        }
+        .icon:hover{
+            transform: rotate(360deg) scale(0.8);
+			color: #21dfcd
+        }
+        input{
+            width: 0;
+            border: none;
+            outline: none;
+            padding: 0;
+            background: none;
+            font-size: 1.1rem;
+            transition: 0.5s ease;
+            line-height: 40px;
+            color: #fff;
+        }
+        .icon{
+            color: #21dfcd;
+            float: right;
+            width: 40px;
+            font-size: 1.3rem;
+            height: 40px;
+            border-radius: 50%;
+            background: #2f3640;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+            cursor: pointer;
+            text-decoration: none;
+        }
+		@media(max-width: 888px){
+			.searche:hover > input{
+            width: 300px;
+        }
+		.searche:hover > .icon{
+           margin-top: -40px;
+        }
+		}
+	</style>
+</head>
+<body>
+	
+ <!-- header start -->
+ <header class="header">
+ 	<div class="container">
+ 		<div class="row v-center">
+ 			<div class="header-item item-left">
+				<div class="headd">
+					<h2>T/G</h2>
+					<h2>T/G</h2>
+				</div>
+ 			</div>
+ 			<!-- menu start here -->
+ 			<div class="header-item item-center">
+ 				<div class="menu-overlay">
+ 				</div>
+ 				<nav class="menu">
+ 					<div class="mobile-menu-head">
+ 						<div class="go-back"><i class="fa fa-angle-left"></i></div>
+ 						<div class="current-menu-title"></div>
+ 						<div class="mobile-menu-close">&times;</div>
+ 					</div>
+ 					<ul class="menu-main">
+ 						<li>
+ 							<a href="index001.html">Home</a>
+ 						</li>
+						 <li>
+							<a href="about us.html">About</a>
+						</li>
+                        <li class="menu-item-has-children">
+                            <a href="Shop.html">Shop </a>
+                            <!-- <a href="#">News & Views <i class="fa fa-angle-down"></i></a> -->
+                            <!-- <div class="sub-menu mega-menu mega-menu-column-4">
+                                <div class="list-item text-center">
+                                    <a href="#">
+                                    <img src="img/p1.jpg" alt="new Product">
+                                    <h4 class="title">Product 1</h4>
+                                    </a>
+                                </div>
+                                <div class="list-item text-center">
+                                    <a href="#">
+                                    <img src="img/p2.jpg" alt="new Product">
+                                    <h4 class="title">Product 2</h4>
+                                    </a>
+                                </div>
+                                <div class="list-item text-center">
+                                    <a href="#">
+                                    <img src="img/p3.jpg" alt="new Product">
+                                    <h4 class="title">Product 3</h4>
+                                    </a>
+                                </div>
+                                <div class="list-item text-center">
+                                    <a href="#">
+                                    <img src="img/p4.jpg" alt="new Product">
+                                    <h4 class="title">Product 4</h4>
+                                   </a>
+                                </div>
+                            </div> -->
+                        </li>
+						<li class="menu-item-has-children">
+							<a href="travals.html">Booking</a>
+							<!-- <div class="sub-menu mega-menu mega-menu-column-4">
+							  <div class="list-item"> -->
+									<!-- <h4 class="title">Men's Fashion</h4> -->
+									<!-- <ul>
+										 <li><a href="#">Skardu</a></li>
+										 <li><a href="#">Islamabad</a></li>
+										 <li><a href="#">Kalasha Valleys</a></li>
+										 <li><a href="#">Hunza</a></li>
+										 <li><a href="#">Peshawar</a></li>
+										 
+									</ul> -->
+									<!-- <h4 class="title">Beauty</h4> -->
+									<!-- <ul>
+								   <li><a href="#">Gojal Valley</a></li>
+								   <li><a href="#">Naltar Valley, Gilgit</a></li>
+								   <li><a href="#">Lahore</a></li>
+								   <li><a href="#">Phandar Valley, Ghizer</a></li>
+								   <li><a href="#">Gwadar</a></li>
+									</ul>
+							  </div> -->
+							  <!-- <div class="list-item">
+								  <h4 class="title">Women's Fashion</h4>
+								  <ul>
+								   <div class="list-item">
+									   <img src="img/shop1.jpg" alt="shop">
+								  </div>
+									</ul>
+									<h4 class="title">Furniture</h4>
+								  <ul>
+								   <div class="list-item">
+									   <img src="img/shop1.jpg" alt="shop">
+								  </div>
+									</ul>
+							  </div>
+							  <div class="list-item">
+								  <h4 class="title">Home, Kitchen</h4>
+								  <ul>
+										<div class="list-item">
+								   <img src="img/shop1.jpg" alt="shop">
+							  </div>
+									</ul>
+							  </div> -->
+						</li>
+ 						<li class="menu-item-has-children">
+ 							<a href="blogs.html">Blog</i></a>
+ 							<!-- <a href="#">Blog <i class="fas fa-angle-down"></i></a> -->
+ 							<!-- <div class="sub-menu single-column-menu">
+ 								<ul>
+ 									<li><a href="#">Standard Layout</a></li>
+ 									<li><a href="#">Grid Layout</a></li>
+ 									<li><a href="#">single Post Layout</a></li>
+ 								</ul>
+ 							</div> -->
+ 						</li>
+ 						<!-- <li class="menu-item-has-children">
+ 							<a href="#">Shop</a> -->
+ 							<!-- <a href="#">Pages <i class="fas fa-angle-down"></i></a> -->
+ 							<!-- <div class="sub-menu single-column-menu">
+ 								<ul>
+ 									<li><a href="#">Login & Sign Up</a></li>
+ 									<li><a href="#">Register</a></li>
+ 									<li><a href="#">FAQ</a></li>
+ 									<li><a href="#">404 Page</a></li>
+ 								</ul>
+ 							</div> -->
+ 						<!-- </li> -->
+ 						<!-- <li>
+ 							<a href="logn.html">Login & Sign Up</a>
+ 						</li> -->
+ 						<li>
+ 							<a href="contactus.html">Contact</a>
+ 						</li>
+ 					</ul>
+ 				</nav>
+ 			</div>
+ 			<!-- menu end here -->
+ 			<div class="header-item item-right">
+				<a href="logn.html"><i class='fas fa-user-circle' style='font-size:27px'></i></a>
+ 				<!-- <a href="#"><i class="fas fa-search"></i></a>
+ 				<a href="#"><i class="far fa-heart"></i></a>
+ 				<a href="#"><i class="fas fa-shopping-cart"></i></a> -->
+ 				<!-- mobile menu trigger -->
+ 				<div class="mobile-menu-trigger">
+ 					<span></span>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ </header>
+ <!-- header end -->
+
+ <!-- banner start -->
+ <section class="banner-section">
+ 	
+ </section>
+ <!-- banner end -->
+
+<script src="js/script.js"></script>
+
+<div class="searche">
+	<input type="text" placeholder="search....">
+	<a href="#" class="icon">
+		<i class="fas fa-search"></i>
+	</a>
+</div>
+<br><br><br><br><br><br>
+<!-- <center>
+    <hr style="width: 1100px; border-width: 3px; background-color: #00c3ff; margin-top: -500px; border-radius: 10px;"><br>
+</center> -->
+
+<div class="co" style="margin-top: -540px;" data-aos="fade-up">
+    <div class="he">
+      <h1 style="font-size: 60px;">Neelum Valley
+  </h1>
+    <div class="author">
+      <img src="s23.jpeg">
+      <p style="  font-family: Miriam Fixed; font-weight: bolder; font-size: xx-large;";
+      >Muhammad <br> Shahid</p>
+    </div>  </div>
+  
+    <div class="conte">
+    <div class="text">
+ <h2 style="font-family: Miriam Fixed; font-weight: bolder;">Neelum Valley</h2>
+      <p style="font-family: Miriam Fixed;">Neelum valley starts from Muzaffarabad and goes along the river Neelum up to the point where Kishanganga river becomes Neelum after entering the Pakistani Kashmir. The official Neelum district starts from Chaliana. Unofficially, whole valley is divided into Lower and Upper Neelum where upper Neelum starts from Athmuqam. Neelum Valley is undoubtedly one of the most fascinating  alpine valleys in Pakistan. Because of the Indo-Pak tension at Line of control, this area has remained a virtual no-go-area for tourists for a long time. I do remember my first visit to Neelum Valley back in 2000 when you often hear artillery sounds and Zero Point (point under direct Indian Army gun range) had to be crossed in night with jeep’s lights switched off. It is just after a few years of ceasefire, people started coming to this area and now they can go all the way up to Taobutt on a metalled road. While whole of Neelum valley is attractive, the area beyond Sardari up to Taobutt and beyond is unmatched in its beauty. If you have come to Neelum all the way and go back from Sharda or Kel, you certainly have missed a lot.
+        Languages:
+
+It is interesting to study the spoken languages of this area as people from different parts speak different languages. From Muzaffarabad up to Dhudial, people speak Hindko or local kashmiri language. From Dhudial to Kharigam, people speak the actual Kashmiri language spoken in the occupied Kashmir. From Sharda then to area a little beyond Kel, people again speak Hindko. People of two villages Janawai andd Phulanwai speak Chillasi language. And then in the final stretch,  people in and around Taobutt speak Shina language that is spoken in Astore and Gilgit areas.
+Transport:
+
+Buses are only available mode of public transport available for whole of Neelum valley. These buses (which are often known as Rocket buses) leave on regular intervals from main Muzaffarabad bus stop in Baila Noor Shah and go all the way to Taobutt. Hiace vans go only up to Athmaqam (as of 2009). The road from Muzaffarabad to Athmaqam is currently being repaired and widened. Once it is done completely (somewhere by 2011) it is expected to reduce the fatigue and travel time of travel. For off-road valleys like Jagran and Shounter, public jeeps are available from Kundal Shahi and Kel respectively.
+
+Accommodation:
+
+Azad Kashmir government rest houses are available at Kairan, Sharda and Kel and are pretty reasonable. They should be booked from the tourism office in Muzaffarabad. Budget hotels can be found at every main town along the road all the way to Taobutt. An official list (not always reliable) of accommodation options in whole of Azad Kashmir including Neelum Valley 
+Trekking Options:
+
+For alpine trekkers, Neelum valley offers a lot. One can reach Naran via Noori Nar top from Sharda. Ratti gali lake is a beautiful lake that can be accessed from Dowarian and one can continue further to Naran. Chitta Katha lake can be reached from Domail village in Kel (1-2 days). An exciting opportunity is to cross the Shounter pass from Shounter village and reach Astore (2-3 days). From Taobutt, an excellent trekking option is to reach Astore via Kamri top or Dadgai forest (3-4 days). This area has been very rarely explored by the trekkers and is certainly promising. Syed Javaid Sherazi has written an excellent travelogue on a trip to this area with Tarrar here. Best time for trekking in these areas is in the months of July and August. There are some trekking options from Jagran as well including a trek to Baboon valley which can be explored. In lower Neelum, one can go to Makra and down to Shogran from Bhairi (2 days).  From Bhairi, an alternate is to try the Blue Mountain (Neela Pahar) or Bald Mountain (Ganja Pahar) in the area that falls under Machiara National Park.
+
+</p>
+      <!--<h2 style="font-family: Algerian;">Determine the time of day that you are most productive:
+  </h2>
+  <p>Figuring out what time you are most productive can ensure maximum efficiency and use of your time. It’s much better to work at maximum productivity for 20 minutes rather than minimum productivity for 1 hour.
+  </p>
+    <h2 style="font-family: Algerian;">Clear your workspace:</h2><p>Working at a desk that’s clean and clear of clutter can go a long way in helping you clear your mind so that you can focus on the task at hand
+  Cleaning your space may be able to influence your state of mind and encourage new ideas and inspirations.</p> -->
+  </div>
+      <!-- <div class="info"> <a href="https://twitter.com/habibawael02/status/1390238135255191553?s=20" target="_blank"> Continue Reading...</a></div> -->
+  </div>
+    
+  </div>
+  <br>
+  <br>
+  <body>
+	<div class="container" data-aos="fade-up">
+		<div class="col-md-12" id="fbcomment">
+			<div class="header_comment">
+				<div class="row">
+					<div class="col-md-6 text-left">
+					  <span class="count_comment">264 Comments</span>
+					</div>
+					<div class="col-md-6 text-right">
+					  <span class="sort_title"  style="font-family: Miriam Fixed;">Sort by</span>
+					  <select class="sort_by">
+						<option>Top</option>
+						<option>Newest</option>
+						<option>Oldest</option>
+					  </select>
+					</div>
+				</div>
+			</div>
+
+			<div class="body_comment">
+				<div class="row">
+					<div class="avatar_comment col-md-1">
+					  <img src="https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg" alt="avatar"/>
+					</div>
+					<div class="box_comment col-md-11">
+					  <textarea class="commentar" placeholder="Add a comment..."></textarea>
+					  <div class="box_post">
+						<div class="pull-left">
+						  <input type="checkbox" id="post_fb"/>
+						  <label for="post_fb">Also post on Facebook</label>
+						</div>
+						<div class="pull-right">
+						  <span>
+							<img src="https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg" alt="avatar" />
+							<i class="fa fa-caret-down"></i>
+						  </span>
+						  <button onclick="submit_comment()" type="button" value="1">Post</button>
+						</div>
+					  </div>
+					</div>
+				</div>
+				<div class="row">
+					<ul id="list_comment" class="col-md-12">
+						<!-- Start List Comment 1 -->
+						<li class="box_result row">
+							<div class="avatar_comment col-md-1">
+								<img src="blog.man.jpg" alt="avatar"/>
+							</div>
+							<div class="result_comment col-md-11">
+								<h4>Nathan Smith</h4>
+								<p>can you share the location of this beach please</p>
+								<div class="tools_comment">
+									<a class="like" href="#">Like</a>
+									<span aria-hidden="true"> · </span>
+									<a class="replay" href="#">Reply</a>
+									<span aria-hidden="true"> · </span>
+									<i class="fa fa-thumbs-o-up"></i> <span class="count">3</span> 
+									<span aria-hidden="true"> · </span>
+									<span>26m</span>
+								</div>
+								<ul class="child_replay">
+									<li class="box_reply row">
+										<div class="avatar_comment col-md-1">
+											<img src="ddd.jpg" alt="avatar"/>
+										</div>
+										 <div class="result_comment col-md-11">
+											<h4>Amanda Hogan</h4>
+											<p>Marvelous Hammad. I love rocks like these, somehow they comfort me.
+                                                A bit to far away to visit (like I did that rock in Spain), so thank you for sharing this beautiful photograph of it.</p>
+											<div class="tools_comment">
+												<a class="like" href="#">Like</a>
+												<span aria-hidden="true"> · </span>
+												<a class="replay" href="#">Reply</a>
+												<span aria-hidden="true"> · </span>
+												<i class="fa fa-thumbs-o-up"></i> <span class="count">7</span> 
+												<span aria-hidden="true"> · </span>
+												<span>5m</span>
+											</div>
+											<ul class="child_replay"></ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						
+            <!-- Start List Comment 1 -->
+						<li class="box_result row">
+							<div class="avatar_comment col-md-1">
+								<img src="pexelsssss.jpg" alt="avatar"/>
+							</div>
+							<div class="result_comment col-md-11">
+								<h4>Anne Carnegie</h4>
+								<p>Wow, it looks surprisingly calm and clean. Normally, we will think of chaotic moments when we mention Karachi.</p>
+								<div class="tools_comment">
+									<a class="like" href="#">Like</a>
+									<span aria-hidden="true"> · </span>
+									<a class="replay" href="#">Reply</a>
+									<span aria-hidden="true"> · </span>
+									<i class="fa fa-thumbs-o-up"></i> <span class="count">11</span> 
+									<span aria-hidden="true"> · </span>
+									<span>9h</span>
+								</div>
+								<ul class="child_replay">
+									<li class="box_reply row">
+										<div class="avatar_comment col-md-1">
+											<img src="bbb.jpg" alt="avatar"/>
+										</div>
+										 <div class="result_comment col-md-11">
+											<h4>John Barry</h4>
+											<p>can you share the location of this beach please</p>
+											<div class="tools_comment">
+												<a class="like" href="#">Like</a>
+												<span aria-hidden="true"> · </span>
+												<a class="replay" href="#">Reply</a>
+												<span aria-hidden="true"> · </span>
+												<i class="fa fa-thumbs-o-up"></i> <span class="count">1</span> 
+												<span aria-hidden="true"> · </span>
+												<span>44m</span>
+											</div>
+											<ul class="child_replay"></ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						
+						<!-- Start List Comment 2 -->
+						<li class="box_result row">
+							<div class="avatar_comment col-md-1">
+								<img src="ccc.jpg" alt="avatar"/>
+							</div>
+							<div class="result_comment col-md-11">
+								<h4>Cormac Heffernan</h4>
+								<p>Wow, it looks surprisingly calm and clean. Normally, we will think of chaotic moments when we mention Karachi.</p>
+								<div class="tools_comment">
+									<a class="like" href="#">Like</a>
+									<span aria-hidden="true"> · </span>
+									<a class="replay" href="#">Reply</a>
+									<span aria-hidden="true"> · </span>
+									<i class="fa fa-thumbs-o-up"></i> <span class="count">4</span> 
+									<span aria-hidden="true"> · </span>
+									<span>16h</span>
+								</div>
+								<ul class="child_replay"></ul>
+							</div>
+						</li>
+					</ul>
+				<button class="show_more" type="button">Load 10 more comments</button>
+         
+				</div>
+			</div>
+		</div>
+	</div>
+        <script>
+            function submit_comment(){
+  var comment = $('.commentar').val();
+  el = document.createElement('li');
+  el.className = "box_result row";
+  el.innerHTML =
+		'<div class=\"avatar_comment col-md-1\">'+
+		  '<img src=\"https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg\" alt=\"avatar\"/>'+
+		'</div>'+
+		'<div class=\"result_comment col-md-11\">'+
+		'<h4>Anonimous</h4>'+
+		'<p>'+ comment +'</p>'+
+		'<div class=\"tools_comment\">'+
+		'<a class=\"like\" href=\"#\">Like</a><span aria-hidden=\"true\"> · </span>'+
+		'<i class=\"fa fa-thumbs-o-up\"></i> <span class=\"count\">0</span>'+
+		'<span aria-hidden=\"true\"> · </span>'+
+		'<a class=\"replay\" href=\"#\">Reply</a><span aria-hidden=\"true\"> · </span>'+
+			'<span>1m</span>'+
+		'</div>'+
+		'<ul class="child_replay"></ul>'+
+		'</div>';
+	document.getElementById('list_comment').prepend(el);
+	$('.commentar').val('');
+}
+
+$(document).ready(function() {
+	$('#list_comment').on('click', '.like', function (e) {
+		$current = $(this);
+		var x = $current.closest('div').find('.like').text().trim();
+		var y = parseInt($current.closest('div').find('.count').text().trim());
+		
+		if (x === "Like") {
+			$current.closest('div').find('.like').text('Unlike');
+			$current.closest('div').find('.count').text(y + 1);
+		} else if (x === "Unlike"){
+			$current.closest('div').find('.like').text('Like');
+			$current.closest('div').find('.count').text(y - 1);
+		} else {
+			var replay = $current.closest('div').find('.like').text('Like');
+			$current.closest('div').find('.count').text(y - 1);
+		}
+	});
+	
+	$('#list_comment').on('click', '.replay', function (e) {
+		cancel_reply();
+		$current = $(this);
+		el = document.createElement('li');
+		el.className = "box_reply row";
+		el.innerHTML =
+			'<div class=\"col-md-12 reply_comment\">'+
+				'<div class=\"row\">'+
+					'<div class=\"avatar_comment col-md-1\">'+
+					  '<img src=\"https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg\" alt=\"avatar\"/>'+
+					'</div>'+
+					'<div class=\"box_comment col-md-10\">'+
+					  '<textarea class=\"comment_replay\" placeholder=\"Add a comment...\"></textarea>'+
+					  '<div class=\"box_post\">'+
+						'<div class=\"pull-right\">'+
+						  '<span>'+
+							'<img src=\"https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg\" alt=\"avatar\" />'+
+							'<i class=\"fa fa-caret-down\"></i>'+
+						  '</span>'+
+						  '<button class=\"cancel\" onclick=\"cancel_reply()\" type=\"button\">Cancel</button>'+
+						  '<button onclick=\"submit_reply()\" type=\"button\" value=\"1\">Reply</button>'+
+						'</div>'+
+					  '</div>'+
+					'</div>'+
+				'</div>'+
+			'</div>';
+		$current.closest('li').find('.child_replay').prepend(el);
+	});
+});
+
+function submit_reply(){
+  var comment_replay = $('.comment_replay').val();
+  el = document.createElement('li');
+  el.className = "box_reply row";
+  el.innerHTML =
+		'<div class=\"avatar_comment col-md-1\">'+
+		  '<img src=\"https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg\" alt=\"avatar\"/>'+
+		'</div>'+
+		'<div class=\"result_comment col-md-11\">'+
+		'<h4>Anonimous</h4>'+
+		'<p>'+ comment_replay +'</p>'+
+		'<div class=\"tools_comment\">'+
+		'<a class=\"like\" href=\"#\">Like</a><span aria-hidden=\"true\"> · </span>'+
+		'<i class=\"fa fa-thumbs-o-up\"></i> <span class=\"count\">0</span>'+
+		'<span aria-hidden=\"true\"> · </span>'+
+		'<a class=\"replay\" href=\"#\">Reply</a><span aria-hidden=\"true\"> · </span>'+
+			'<span>1m</span>'+
+		'</div>'+
+		'<ul class="child_replay"></ul>'+
+		'</div>';
+	$current.closest('li').find('.child_replay').prepend(el);
+	$('.comment_replay').val('');
+	cancel_reply();
+}
+
+function cancel_reply(){
+	$('.reply_comment').remove();
+}
+        </script>
+
+	<br><br><br>
+<!-- footer -->
+<footer>
+	<div class="container">
+		<div class="footer-top">
+			<div class="row">
+				<div class="col-md-6 col-lg-3 about-footer">
+					<div class="boxxxx">
+					<div class="headds">
+						<h2 style="font-size: 80px;">T/G</h2>
+						<h2 style="font-size: 80px;">T/G</h2>
+					</div>
+				</div>
+					<!-- <ul>
+						<li><a href="tel:0317-1164028"><i class="fas fa-phone fa-flip-horizontal"></i>0317-1164028</a></li>
+						<li><i class="fas fa-map-marker-alt"></i>
+							1 / 105 Bay Lights,
+							<br/>Lorem Ipsum,
+							<br/>LIC 3201
+						</li>
+					</ul> -->
+					<!-- <a href="" class="btn red-btn">Book Now</a> -->
+				</div>
+				<div class="col-md-6 col-lg-2 page-more-info">
+					<div class="footer-title" style="margin-top: -30px;">
+						<h4><br> Links</h4>
+					</div>
+					<ul>
+						<li style="font-family: Aharoni;"><a href="index001.html">Home</a></li>
+						<li style="font-family: Aharoni;"><a href="about us.html">About</a></li>
+						<li style="font-family: Aharoni;"><a href="Shop.html">Shop</a></li>
+						<li style="font-family: Aharoni;"><a href="blogs.html">Blog</a></li>
+						<li style="font-family: Aharoni;"><a href="contactus.html">Contact</a></li>
+					</ul>
+				</div>
+					<div class="col-md-6 col-lg-3 page-more-info">
+					<div class="footer-title">
+						<h4>Nwes letter</h4>
+					</div>
+					<div class="ee">
+						<b><ion-icon name="mail"></ion-icon></b>
+						<input type="email" placeholder="Enter Your Email id" required>
+						<button type="submit"><b><ion-icon name="arrow-redo-circle"></b></ion-icon></button>
+					</div>
+					<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+					<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+				</div>
+				<div class="col-md-6 col-lg-4 open-hours">
+					<div class="footer-title">
+						<h4>Open hours</h4>
+						<ul class="footer-social">
+							<li><a href="" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="" target="_blank"><i class="fab fa-youtube"></i></a></li>
+
+						</ul>
+					</div>
+					<table class="table" >
+						<tbody>
+							<tr>
+								<td  style="font-family: Aharoni;"><i class="far fa-clock"></i>Monday Thursday</td>
+								<td style="font-family: Miriam Fixed;">9:00am - 5:00pm</td>
+							</tr>
+							<tr>
+								<td style="font-family: Aharoni;"><i class="far fa-clock"></i>Friday</td>
+								<td style="font-family: Miriam Fixed;">9:00am - 4:00pm</td>
+							</tr>
+							<tr>
+								<td style="font-family: Aharoni;"><i class="far fa-clock"></i>Sturday</td>
+								<td style="font-family: Miriam Fixed;">9:00am - 1:30pm</td>
+							</tr>
+							<tr>
+								<td style="font-family: Aharoni;"><i class="far fa-clock"></i>Sunday</td>
+								<td style="font-family: Miriam Fixed;">9:30am - 12:00pm</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<div class="footer-logo">
+
+					<table>
+						<tbody>
+							<tr>
+								<td><img src="pexels9.jpg" style="width: 60px; height: 80px;"></td>
+								<td><img src="pexels10.jpg" style="width: 60px; height: 80px;"></td>
+								<td><img src="pexe.jpg" style="width: 60px; height: 80px;"></td>
+								<td><img src="pexels12.jpg" style="width: 60px; height: 80px;"></td>
+								<td><img src="pexels13.jpg" style="width: 60px; height: 80px;"></td>
+						</tbody>
+					</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="footer-bottom">
+			<div class="row" style="font-family: Miriam Fixed;">
+				<div class="col-sm-4" >
+					<a href="pravicy.html">Privacy policy</a>
+				</div>
+				<div class="col-sm-8">
+					<p>TOURISTS GALORE @ 2022 All rights reserved</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- Our AOS DATA -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+	offset: 330,
+	duration: 1000,
+  });
+</script>
+</body>
+</html>

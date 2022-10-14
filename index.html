@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOURISTS GALORE</title>
+    <link rel="short icon" href="logo2.png">
+    <link rel="stylesheet" href="indexstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="headd.css">
+</head>
+<body>
+    <!-- <header>
+        <div class="logo">
+        <img src="remove.png">
+    </div>
+    <a href="#"><button class="login">Login</button></a>
+    </header> -->
+    <section class="home">
+        <video class="video-slide active" src="advan.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="Island.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="camp.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="nat.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="off.mp4" autoplay muted loop></video>
+        <div class="content active">
+            <center><div class="headd">
+                <h2>TOURISTS/GALORE</h2>
+                <h2>TOURISTS/GALORE</h2>
+            </div></center>
+            <hr>
+            <h1>ADVENTURE IS<br><span>WORTHWHILE</span></h1>
+            <p>“Some beautiful paths can’t be discovered without getting lost.” From traveling and exploring new places to extreme sports like scuba diving, sky diving, parachuting, rafting, mountain climbing, and more, there are an increasing number of ways to challenge yourself and ignite your adventurous spirit.</p>
+            <a href="index001.html">Get Start</a>
+        </div>
+        <div class="content">
+            <center><div class="headd">
+                <h2>TOURISTS/GALORE</h2>
+                <h2>TOURISTS/GALORE</h2>
+            </div></center>
+            <hr>
+            <h1>WONDERFUL<br><span>ISLAND</span></h1>
+            <p>The island life – looking up to the palm trees, feel the sand between your toes, look over a turquoise coloured ocean and feel the sun on your skin. Those are a few reasons of why we are island lovers. Travel quotes are perfect to cure your wanderlust. </p>
+            <a href="index001.html">Get Start</a>
+        </div>
+        <div class="content">
+            <center><div class="headd">
+                <h2>TOURISTS/GALORE</h2>
+                <h2>TOURISTS/GALORE</h2>
+            </div></center>
+            <hr>
+            <h1>CAMPING<br><span>ENJOY</span></h1>
+            <p>Some are to do with the idealised romance of camping, such as sleeping out under the stars, and being alone in nature.Others are to do with camping being a cheap way to travel.</p>
+            <a href="index001.html">Get Start</a>
+        </div>
+        <div class="content">
+            <center><div class="headd">
+                <h2>TOURISTS/GALORE</h2>
+                <h2>TOURISTS/GALORE</h2>
+            </div></center>
+            <hr>
+            <h1>FEEL NATURE<br><span>RELAX</span></h1>
+            <p>"I think Nature's imagination is so much greater than man's, she's never gonna let us relax!" "Nature to be commanded must be obeyed." "My wish is to stay always like this, living quietly in a corner of nature." "Should you shield the canyons from the windstorms you would never see the true beauty of their carvings."</p>
+            <a href="index001.html">Get Start</a>
+        </div>
+        <div class="content">
+            <center><div class="headd">
+                <h2>TOURISTS/GALORE</h2>
+                <h2>TOURISTS/GALORE</h2>
+            </div></center>
+            <hr>
+            <h1>ADVENTURE<br><span>OFF ROAD</span></h1>
+            <p>“Adventure is an attitude that we must apply to the day to day obstacles.” John Amat. “Taking the road less traveled may make all the difference in your life.One of my favorite things is going where I've never been.” Diane Arbus. “Real fun begins where the paved road ends.</p>
+            <a href="index001.html">Get Start</a>
+        </div>
+        <div class="media-section">
+            <!-- <a href="logn.html"><i class='fas fa-user-circle' style='font-size:27px'></i></a> -->
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="slider">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+    <script>
+        const btns= document.querySelectorAll(".nav-btn");
+        const slides= document.querySelectorAll(".video-slide");
+        const contents= document.querySelectorAll(".content");
+
+        var slidernav = function(manual){
+            btns.forEach((btn) => {
+                btn.classList.remove("active")
+            });
+            
+            slides.forEach((slide) => {
+                slide.classList.remove("active")
+            });
+            contents.forEach((content) => {
+                content.classList.remove("active")
+            });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                slidernav(i);
+            });
+        });
+    </script>
+</body>
+</html>

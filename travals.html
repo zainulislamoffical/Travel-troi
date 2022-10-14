@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TOURISTS GALORE - BOOKING</title>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="short icon" href="logo2.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="text.css">
+	<link rel="stylesheet" href="zoom.css">
+	<link rel="stylesheet" href="footerstyle.css">
+    <link rel="stylesheet" href="about.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Marck+Script">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rakkas">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css">
+	<link href="https://fonts.googleapis.com/css?family=KoHo" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="travals.css">
+	<!-- <link rel="stylesheet" href="travals.js"> -->
+	<script src="travals.js" defer></script>
+	<style>
+		html{
+			scroll-behavior: smooth;
+		}
+		::-webkit-scrollbar{
+				width: 15px;
+			}
+			::-webkit-scrollbar-track{
+				background: #6600ff93;
+				border-radius: 1px;
+			}
+			::-webkit-scrollbar-thumb{
+				background: #00a2e29c;
+				border-radius: 50px;
+			}
+		body{
+			background:#ffffffd8 url("pex.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-blend-mode:saturation;
+		}
+		.headd{
+			position: relative;
+		}
+		.headd h2{
+			color: #e6e6e6;
+			font-size: 60px;
+			position: absolute;
+			font-family: "Cooper Black";
+			/* letter-spacing: 5px; */
+			margin-left: 95px;
+			margin-top: -5px;
+			transform: translate(-50%, -50%);
+		}
+		.headd h2:nth-child(1){
+			color: transparent;
+			-webkit-text-stroke: 4px #e6e6e6;
+		} 
+		.headd h2:nth-child(2){
+			color: #00b7ff;
+			animation: animate 3s ease-in-out infinite;
+		} 
+		@keyframes animate{
+			0%,
+			100%{
+				clip-path:polygon(
+					0% 45%,
+					16% 44%,
+					33% 50%,
+					54% 60%,
+					70% 61%,
+					84% 59%,
+					100% 52%,
+					100% 100%,
+					0% 100%
+				);
+			}
+			50%{
+				clip-path:polygon(
+					0% 60%,
+					15% 65%,
+					34% 66%,
+					51% 62%,
+					67% 50%,
+					84% 45%,
+					100% 46%,
+					100% 100%,
+					0% 100%
+				);
+			}
+		}
+		@media(max-width: 1040px){
+			.headd h2{
+				margin-top:3px;
+				font-size: 40px;
+				margin-left: 60px;
+			}
+		}
+		.searche{
+            position: absolute;
+            top: 18%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #2c3441;
+            height: 60px;
+            border-radius: 100px;
+            padding: 10px;
+        }
+        .searche:hover > input{
+            width: 400px;
+            padding: 0 10px;
+        }
+        .searche:hover > .icon{
+            background: #536179;
+        }
+        .icon:hover{
+            transform: rotate(360deg) scale(0.8);
+			color: #21dfcd
+        }
+        input{
+            width: 0;
+            border: none;
+            outline: none;
+            padding: 0;
+            background: none;
+            font-size: 1.1rem;
+            transition: 0.5s ease;
+            line-height: 40px;
+            color: #fff;
+        }
+        .icon{
+            color: #21dfcd;
+            float: right;
+            width: 40px;
+            font-size: 1.3rem;
+            height: 40px;
+            border-radius: 50%;
+            background: #2f3640;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+            cursor: pointer;
+            text-decoration: none;
+        }
+		@media(max-width: 888px){
+			.searche:hover > input{
+            width: 300px;
+        }
+		.searche:hover > .icon{
+           margin-top: -40px;
+        }
+		}
+		.underline{
+			width: 100%;
+			height: 5px;
+			background: #767676;
+			border-radius: 3px;
+			position: absolute;
+			top: 25px;
+			left: 0;
+			overflow: hidden;
+		}
+		.underline span{
+			width: 15px;
+			height: 100%;
+			background: #fff;
+			border-radius: 3px;
+			position: absolute;
+			top: 0;
+			left: 10px;
+			animation: moving 2s linear infinite;
+		}
+		@keyframes moving{
+			0%{
+				left: -20px;
+			}
+			100%{
+				left: 100%;
+			}
+		}
+		#app {
+		cursor: pointer;
+		position: relative;
+		width: 180px;
+		}
+		#message {
+		font-size: 18px;
+		color: #fff;
+		line-height: 1;
+		padding: 20px 25px;
+		text-align: center;
+		border-radius: 40px;
+		transition: 0.3s ease background-color, 0.3s ease box-shadow;
+		background: #1e2a78;
+		}
+		#send_btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 20px;
+		line-height: 1;
+		color: #fff;
+		padding: 18px 12px;
+		cursor: pointer;
+		transition: 0.3s ease transform;
+		}
+		#message.sending {
+		background-color: #ffd615;
+		box-shadow: 0 20px 30px -6px #ffd615;
+		}
+		#send_btn.sending {
+		transform: rotateZ(-90deg);
+		animation: shake 0.3s ease 0.5s infinite;
+		}
+		@keyframes shake {
+		10%,
+		90% {
+			transform: translate3d(-1px, 0, 0) rotateZ(-90deg);
+		}
+		20%,
+		80% {
+			transform: translate3d(1px, 0, 0) rotateZ(-90deg);
+		}
+		30%,
+		50%,
+		70% {
+			transform: translate3d(-1px, 0, 0) rotateZ(-90deg);
+		}
+		40%,
+		60% {
+			transform: translate3d(1px, 0, 0) rotateZ(-90deg);
+		}
+		}
+
+		#message.sent {
+		background-color: #ff1f5a;
+		box-shadow: 0 20px 30px -6px #ff1f5a;
+		}
+
+		#send_btn.sent {
+		transform: rotateZ(-90deg);
+		animation: moveUp 1s ease 0s forwards;
+		}
+		@keyframes moveUp {
+		0% {
+			margin-top: 0;
+			transform: scale(1) rotateZ(-90deg);
+		}
+		100% {
+			color: #ff1f5a;
+			margin-top: -100px;
+			transform: scale(0) rotateZ(-90deg);
+		}
+		}
+		.ticket{
+			border: 3px solid #ffffff23;
+			width: 530px;
+			height: 555px;
+			margin-left: 700px;
+			margin-top: -530px;
+			border-radius: 25px;
+		}
+		.ticket h3{
+			font-weight: 800;
+			font-size: 50px;
+			font-family: "Miriam Fixed";
+		}
+		.ticket p{
+			font-size: 18px;
+			font-weight: 600;
+			font-family: "FrankRuehl";
+			margin-left: -10px;
+			margin-top: 20px;
+			position: relative;
+		}
+		.alll{
+			margin-left: -60px;
+			font-size: 18px;
+			font-weight: 600;
+			font-family: "FrankRuehl";
+			margin-top: 20px;
+			position: relative;
+		}
+		.ticket b{
+			margin-left: 80px;
+		}
+		@media(max-width: 1040px){
+			.ticket{
+			width: 250px;
+			height: 555px;
+			margin-left: -20px;
+			margin-top: 130px;
+			border-radius: 25px;
+			border: 0px solid #ffffff23;
+		}
+		.ticket h3{
+			font-weight: 800;
+			font-size: 50px;
+			font-family: "Miriam Fixed";
+			margin-top: -20px;
+		}
+		.ticket p{
+			font-size: 13px;
+			font-weight: 600;
+			font-family: "FrankRuehl";
+			margin-left: -10px;
+			margin-top: 20px;
+			position: relative;
+		}
+		.ticket b{
+			margin-left: 80px;
+		}
+		}
+		/* ffoo */
+		.fo{
+			border: 2px solid #ffffff6b; 
+			margin-top: -500px; 
+			height: 610px;  
+			background:#ffffff8f url(form1.jpg); 
+			background-blend-mode: saturation; 
+			background-repeat: no-repeat; 
+			background-size: cover;
+		}
+		.l1{
+			margin-left: -980px; 
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: 10px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l2{
+			margin-left: -295px; 
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: -80px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l3{
+			margin-left: -970px; 
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: 10px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l4{
+			margin-left: -220px; 
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: -85px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l5{
+			margin-left: -1045px; 
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: 13px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l6{
+			margin-left: -588px; 
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: -82px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l7{
+			margin-left: -105px; 
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: -82px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l8{
+			margin-left: -1045px; 
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: 10px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l9{
+			margin-left: -284px; 
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: -85px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l10{
+			margin-left: -970px; 
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: 9px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l11{
+			margin-left: -303px; 
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: -84px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		#fw{
+			width: 280px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -10px; 
+			color: #696969; 
+			margin-left: -860px; 
+			text-transform: uppercase; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni";
+		}
+		#hf{
+			width: 280px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -16px; 
+			color: #696969; 
+			margin-left: -135px; 
+			text-transform: uppercase; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni";
+		}
+		.dat{
+			width: 280px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -3px; color: #696969; 
+			margin-left: -860px; 
+			text-transform: uppercase; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni";
+		}
+		.datr{
+			width: 280px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -20px; 
+			color: #696969; 
+			margin-left: -135px; 
+			text-transform: uppercase; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni";
+		}
+		.el{
+			width: 180px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -50px; 
+			color: #696969; 
+			margin-left: -954px; 
+			text-transform: uppercase; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double;
+			padding: 8px 24px; 
+			font-family: "Aharoni"; 
+			font-size: 28px;
+		}
+		.al{
+			width: 180px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -50px; 
+			color: #696969; 
+			margin-left: -495px; 
+			text-transform: uppercase; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni"; 
+			font-size: 28px;
+		}
+		.cl{
+			width: 180px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -550px; 
+			color: #696969; 
+			margin-left: -35px; 
+			text-transform: uppercase; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni"; 
+			font-size: 28px;
+		}
+		.em{
+			width: 280px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -225px; 
+			color: #696969; 
+			margin-left: -860px; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni";
+		}
+		.ph{
+			width: 280px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -12px; 
+			color: #696969; 
+			margin-left: -132px; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni"; 
+			font-size: 28px;
+		}
+		#tc{
+			width: 280px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -4px; 
+			color: #696969; 
+			margin-left: -860px; 
+			text-transform: uppercase; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni";
+		}
+		#mytextbox{
+			width: 280px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -15px; 
+			color: #696969; 
+			margin-left: -135px; 
+			text-transform: uppercase; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni";
+		}
+		#mytext{
+			margin-top: 30px; 
+			width: 15%; 
+			margin-left: -920px;
+		}
+		@media(max-width: 1040px){
+			.fo{
+			margin-top: -500px; 
+			height: 2000px;  
+		}
+		.l1{
+			margin-left: -45px; 
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: 10px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l2{
+			margin-left: -45px;  
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: 20px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l3{
+			margin-left: -45px;  
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: 20px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l4{
+			margin-left: -45px;  
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: 20px;  
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l5{
+			margin-left: -45px;  
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: 20px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l6{
+			margin-left: -45px;  
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: 20px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l7{
+			margin-left: -45px;  
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: 20px;  
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l8{
+			margin-left: -45px;  
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: 20px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l9{
+			margin-left: -45px;  
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: 20px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l10{
+			margin-left: -45px;  
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: 20px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+		.l11{
+			margin-left: -45px;  
+			color: #4b4b4b; 
+			font-size: 20px; 
+			margin-top: 20px; 
+			font-family: "Miriam Fixed";
+			font-weight: bolder;
+		}
+
+
+
+		#fw{
+			width: 280px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -10px; 
+			color: #696969; 
+			margin-left: -35px; 
+			text-transform: uppercase; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni";
+		}
+		#hf{
+			width: 280px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -16px; 
+			color: #696969; 
+			margin-left: -35px; 
+			text-transform: uppercase; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni";
+		}
+		.dat{
+			width: 280px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -3px; color: #696969; 
+			margin-left: -35px; 
+			text-transform: uppercase; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni";
+		}
+		.datr{
+			width: 280px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -20px; 
+			color: #696969; 
+			margin-left: -35px; 
+			text-transform: uppercase; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni";
+		}
+		.el{
+			width: 180px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -50px; 
+			color: #696969; 
+			margin-left: -35px; 
+			text-transform: uppercase; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double;
+			padding: 8px 24px; 
+			font-family: "Aharoni"; 
+			font-size: 28px;
+		}
+		.al{
+			width: 180px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -50px; 
+			color: #696969; 
+			margin-left: -35px; 
+			text-transform: uppercase; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni"; 
+			font-size: 28px;
+		}
+		.cl{
+			width: 180px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -550px; 
+			color: #696969; 
+			margin-left: -35px; 
+			text-transform: uppercase; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni"; 
+			font-size: 28px;
+		}
+		.em{
+			width: 280px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -225px; 
+			color: #696969; 
+			margin-left: -35px; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni";
+		}
+		.ph{
+			width: 280px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -12px; 
+			color: #696969; 
+			margin-left: -35px; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni"; 
+			font-size: 28px;
+		}
+		#tc{
+			width: 280px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -4px; 
+			color: #696969; 
+			margin-left: -35px; 
+			text-transform: uppercase; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni";
+		}
+		#mytextbox{
+			width: 280px; 
+			height: 50px; 
+			border: 5px solid #ffffff; 
+			background: white; 
+			border-radius: 50px; 
+			margin-top: -15px; 
+			color: #696969; 
+			margin-left: -35px; 
+			text-transform: uppercase; 
+			border-color: #00a2e28c; 
+			border-top-style: double; 
+			border-left-style: double; 
+			border-right-style: double; 
+			border-bottom-style: double; 
+			padding: 8px 24px; 
+			font-family: "Aharoni";
+		}
+		#mytext{
+			margin-top: 30px; 
+			width: 45%; 
+			margin-left: -45px; 
+		}
+		}
+		.hhr{
+			margin-top: 500px;
+			width: 80px;
+			border-width: 5px; 
+			background-color: #00c3ff;  
+			margin-left: 740px;
+		}
+		@media(max-width: 1040px){
+			.hhr{
+			margin-top: 500px;
+			width: 80px;
+			border-width: 5px; 
+			background-color: #00c3ff;  
+			margin-left: -1000px;
+			}
+		}
+	</style>
+</head>
+<body>
+ <!-- header start -->
+ <header class="header">
+ 	<div class="container">
+ 		<div class="row v-center">
+ 			<div class="header-item item-left">
+				<div class="headd">
+					<h2>T/G</h2>
+					<h2>T/G</h2>
+				</div>
+ 			</div>
+ 			<!-- menu start here -->
+ 			<div class="header-item item-center">
+ 				<div class="menu-overlay">
+ 				</div>
+ 				<nav class="menu">
+ 					<div class="mobile-menu-head">
+ 						<div class="go-back"><i class="fa fa-angle-left"></i></div>
+ 						<div class="current-menu-title"></div>
+ 						<div class="mobile-menu-close">&times;</div>
+ 					</div>
+ 					<ul class="menu-main">
+ 						<li>
+ 							<a href="index001.html">Home</a>
+ 						</li>
+						 <li>
+							<a href="about us.html">About</a>
+						</li>
+						<li class="menu-item-has-children">
+							<a href="Shop.html">Shop </a>
+							<!-- <a href="#">News & Views <i class="fa fa-angle-down"></i></a> -->
+							<!-- <div class="sub-menu mega-menu mega-menu-column-4">
+								<div class="list-item text-center">
+									<a href="#">
+									<img src="img/p1.jpg" alt="new Product">
+									<h4 class="title">Product 1</h4>
+									</a>
+								</div>
+								<div class="list-item text-center">
+									<a href="#">
+									<img src="img/p2.jpg" alt="new Product">
+									<h4 class="title">Product 2</h4>
+									</a>
+								</div>
+								<div class="list-item text-center">
+									<a href="#">
+									<img src="img/p3.jpg" alt="new Product">
+									<h4 class="title">Product 3</h4>
+									</a>
+								</div>
+								<div class="list-item text-center">
+									<a href="#">
+									<img src="img/p4.jpg" alt="new Product">
+									<h4 class="title">Product 4</h4>
+								   </a>
+								</div>
+							</div> -->
+						</li>
+						<li class="menu-item-has-children">
+							<a href="travals.html">Booking</a>
+							<!-- <div class="sub-menu mega-menu mega-menu-column-4">
+							  <div class="list-item"> -->
+									<!-- <h4 class="title">Men's Fashion</h4> -->
+									<!-- <ul>
+										 <li><a href="#">Skardu</a></li>
+										 <li><a href="#">Islamabad</a></li>
+										 <li><a href="#">Kalasha Valleys</a></li>
+										 <li><a href="#">Hunza</a></li>
+										 <li><a href="#">Peshawar</a></li>
+										 
+									</ul> -->
+									<!-- <h4 class="title">Beauty</h4> -->
+									<!-- <ul>
+								   <li><a href="#">Gojal Valley</a></li>
+								   <li><a href="#">Naltar Valley, Gilgit</a></li>
+								   <li><a href="#">Lahore</a></li>
+								   <li><a href="#">Phandar Valley, Ghizer</a></li>
+								   <li><a href="#">Gwadar</a></li>
+									</ul>
+							  </div> -->
+							  <!-- <div class="list-item">
+								  <h4 class="title">Women's Fashion</h4>
+								  <ul>
+								   <div class="list-item">
+									   <img src="img/shop1.jpg" alt="shop">
+								  </div>
+									</ul>
+									<h4 class="title">Furniture</h4>
+								  <ul>
+								   <div class="list-item">
+									   <img src="img/shop1.jpg" alt="shop">
+								  </div>
+									</ul>
+							  </div>
+							  <div class="list-item">
+								  <h4 class="title">Home, Kitchen</h4>
+								  <ul>
+										<div class="list-item">
+								   <img src="img/shop1.jpg" alt="shop">
+							  </div>
+									</ul>
+							  </div> -->
+						</li>
+ 						<li class="menu-item-has-children">
+							<a href="blogs.html">Blog</i></a>
+							<!-- <a href="#">Blog <i class="fas fa-angle-down"></i></a> -->
+							<!-- <div class="sub-menu single-column-menu">
+								<ul>
+									<li><a href="#">Standard Layout</a></li>
+									<li><a href="#">Grid Layout</a></li>
+									<li><a href="#">single Post Layout</a></li>
+								</ul>
+							</div> -->
+						</li>
+ 						<!-- <li class="menu-item-has-children">
+							<a href="#">Shop</a> -->
+							<!-- <a href="#">Pages <i class="fas fa-angle-down"></i></a> -->
+							<!-- <div class="sub-menu single-column-menu">
+								<ul>
+									<li><a href="#">Login & Sign Up</a></li>
+									<li><a href="#">Register</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">404 Page</a></li>
+								</ul>
+							</div> -->
+						<!-- </li> -->
+ 						<!-- <li>
+ 							<a href="logn.html">Login & Sign Up</a>
+ 						</li> -->
+ 						<li>
+ 							<a href="contactus.html">Contact</a>
+ 						</li>
+ 					</ul>
+ 				</nav>
+ 			</div>
+ 			<!-- menu end here -->
+ 			<div class="header-item item-right">
+				<a href="logn.html"><i class='fas fa-user-circle' style='font-size:27px'></i></a>
+ 				<!-- <a href="#"><i class="fas fa-search"></i></a>
+ 				<a href="#"><i class="far fa-heart"></i></a>
+ 				<a href="#"><i class="fas fa-shopping-cart"></i></a> -->
+ 				<!-- mobile menu trigger -->
+ 				<div class="mobile-menu-trigger">
+ 					<span></span>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ </header>
+ <!-- header end -->
+
+ <!-- banner start -->
+ <section class="banner-section">
+ 	
+ </section>
+ <!-- banner end -->
+
+<script src="js/script.js"></script>
+
+<div class="searche">
+	<input type="text" placeholder="search....">
+	<a href="#" class="icon">
+		<i class="fas fa-search"></i>
+	</a>
+</div>
+<center><h1 style="margin-top: -400px;  font-family: Miriam Fixed; font-weight: bolder; font-size: 46px;  color: #360088;" data-aos="fade-up">CUSTOMIZE <i style="color: #00c3ff;">P</i>ACKAGE</h1></center><hr class="hhr">
+
+<br><br><br><br>
+
+<center>
+	<form class="fo" data-aos="fade-up"><br>
+		<label class="l1">from where</label>
+		<!-- <input type="text" placeholder="Enter Your City"  style="width: 280px; height: 50px; border: 5px solid #ffffff; background: white; border-radius: 50px; margin-top: 4px; color: black; margin-left: -860px; text-transform: uppercase; border-color: #007ee6; border-top-style: double; border-left-style: double; border-right-style: double; border-bottom-style: double; padding: 8px 24px; font-family: Aharoni;"> -->
+		<select class="form-control" id="fw">
+			<option>Karachi</option>
+			<option>Lahore</option>
+			<option>Peshawar</option>
+			<option>Islamabad</option>
+			<option>Balochistan</option>
+			<option>Gilgit Baltistan</option>
+		  </select>
+		  <p class="l2">how far</p>
+		  <select class="form-control" id="hf">
+			<option>Karakoram</option>
+			<option>Skardu</option>
+			<option>Kalasha Valleys</option>
+			<option>Hunza</option>
+			<option>Gojal Valley</option>
+			<option>Naltar Valley, Gilgit</option>
+			<option>SWAT VALLEY</option>
+			<option>DEOSAI NATIONAL PARK</option>
+			<option>KHUNJERAB PASS</option>
+		  </select>
+		  <label class="l3">Check-in date</label><br>
+		  <input class="dat" type="date" id="d1" placeholder="Enter Your City" required>
+		  <p class="l4">Check-out date</p>
+		  <input class="datr" type="date" id="d2" placeholder="Enter Your City" required><br>
+		  <p class="l5">Elder</p>
+		  <input class="el" type="number" id="e" value="0" required>
+		  <p class="l6">Adult</p>
+		  <input class="al" type="number" id="a" value="0" required>
+		  <p class="l7">Childern</p>
+		  <input class="cl" type="number" id="c" value="0" required>
+		  <p class="l8">Email</p>
+		  <input class="em" type="email" id="email" placeholder="ENTER YOUR EMAIL" required>
+		  <p class="l9">Phone No.</p> 
+		  <input class="ph" type="number" id="ph" placeholder="03**-*******" required><br>
+		  <label class="l10">Travel Class</label>
+		  <select class="form-control" id="tc" required>
+			<option >Economy class</option>
+			<option >Business class</option>
+			<option >First class</option>
+		  </select>
+		  <p class="l11">Airline</p>
+		  <select class="form-control" id="mytextbox">
+			<option>PIA</option>
+			<option>Airblue</option>
+			<option>Askari Aviation</option>
+			<option>Shaheen Airlines</option>
+			<option>Serene Air</option>
+		  </select>
+
+<!-- <p id="p2"></p> -->
+
+		  <!-- <label style="margin-left: -1010px; color: white; font-size: 20px; margin-top: 30px; font-family:Algerian;">One Way</label><br>
+		  <input type="radio" id="ow" name="radio" placeholder="Enter Your City"  style="width: 30px; height: 30px;   border-radius: 50px; margin-top: -3px; margin-left: -1010px; text-transform: uppercase;  border-top-style: double; border-left-style: double; border-right-style: double; border-bottom-style: double; padding: 8px 24px; font-family: Aharoni;">
+		  <p style="margin-left: -730px; color: white; font-size: 20px; margin-top: -71px; font-family:Algerian;">Round-Trip</p>
+		  <input type="radio" id="rt" name="radio" placeholder="Enter Your City"  style="width: 30px; height: 30px;  border-radius: 50px; margin-top: -20px; margin-left: -730px; text-transform: uppercase;  border-top-style: double; border-left-style: double; border-right-style: double; border-bottom-style: double; padding: 8px 24px; font-family: Aharoni;"><br>
+		  <div id="app" style="margin-left: -115px; margin-top: -60px;"> -->
+
+			<!-- <div id="message">Send</div>
+			<input type="button" onclick="abc()" style="width: 140px; margin-top: -50px;">
+			<div id="send_btn"><i class="fa fa-fighter-jet"></i>
+		  </div> -->
+
+
+		  <!-- <div id="message">send2</div>
+			<input type="button" onclick="iq()" style="width: 140px; margin-top: -50px;">
+			<div id="send_btn"><i class="fa fa-fighter-jet"></i>
+		  </div> -->
+
+		  <!-- <input style="width: 150px; height: 150px; border: 3px solid black;" type="button" name="" onclick="iq()"> -->
+		  <button id="mytext" class="btn btn-info" onclick="iq()">ChecK Ticket</button>
+		  <!-- jQuery library -->
+		  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+		  <br>
+		  <div class="ticket">
+			<h3>TICKET</h3>
+			<p class="alll">AIRLINE----------------------------------- <b style="margin-left: 39px;"  id="p2" >PIA</b></p>
+			<p>TRAVEL CLASS----------------------- <b style="margin-left: 19px;" id="t">Economy class</b></p>
+			<p>ELDER<span id="el"></span>----------------------------------------- <b id="eamount">0</b></p>
+			<p>ADULT <span id="yth"></span>----------------------------------------- <b  id="yamount">0</b></p>
+			<p>CHILDERN <span id="chld"></span>------------------------------------ <b  id="camount">0</b></p>
+			<p>DAYS------------------------------------------- <b id="days">0</b></p>
+			<p>FROM WHERE-------------------------------- <b style="margin-left: 19px;" id="go">Karachi</b></p>
+			<p>HOW FAR--------------------------------- <b style="margin-left: 19px;" id="back">Karakoram</b></p>
+			<p>TOTAL PACKAGE------------------------- <b id="total" >0</b></p>
+		  </div>
+		</form>
+
+
+		<script>
+
+			function iq(){
+
+
+
+				var email=document.getElementById("email").value;
+            var reg=/^[a-z]+[0-9]+@[a-z]+\.[a-z]/g
+            var result=reg.test(email);
+            if(result){
+                alert("Email Valid");
+            }
+            else{
+                alert("Email Invalid");
+            }
+
+
+
+		var email=document.getElementById("ph").value;
+        var reg=/^[0][3][0-9]{2}[-][0-9]{7}$/g
+        var result=reg.test(email)
+        if(result){
+            alert("Number valid")
+        }else{
+            alert("Number invalid")
+        }
+				// var mytext = document.getElementById('mytextbox');
+
+				const date1 = new Date(document.getElementById("d1").value);
+				const date2 = new Date(document.getElementById("d2").value);
+				const diffTime = Math.abs(date2 - date1);
+				const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+
+				
+				var elder = 0;
+				var youth= 0;
+				var child= 0;
+			
+			var  mytextbox = document.getElementById('mytextbox').value;
+			document.getElementById('p2').innerHTML=mytextbox;
+		
+			var  my = document.getElementById('tc').value;
+			document.getElementById('t').innerHTML=my;
+			
+			var  eldr = document.getElementById('e').value;
+			document.getElementById('el').innerHTML= "* " + eldr;
+
+
+			var  yth = document.getElementById('a').value;
+			document.getElementById('yth').innerHTML= "* " + yth;
+
+			var  chd = document.getElementById('c').value;
+			document.getElementById('chld').innerHTML= "* " + chd;
+
+			var  fow = document.getElementById('fw').value;
+			document.getElementById('go').innerHTML= fow;
+
+			var  hof = document.getElementById('hf').value;
+			document.getElementById('back').innerHTML= hof;
+
+
+			if(my=="Economy class"){
+
+				if(mytextbox=="PIA"){
+
+					child = 1000;
+					youth = 2500;
+					elder = 4000;
+
+
+				}else if(mytextbox=="Airblue"){
+
+					child = 1500;
+					youth = 3000;
+					elder = 4500;
+
+				}else if(mytextbox=="Askari Aviation"){
+
+					child = 2000;
+					youth = 3500;
+					elder = 5000;
+
+				}else if(mytextbox=="Shaheen Airlines"){
+
+					child = 2500;
+					youth = 4000;
+					elder = 5500;
+
+				}else if(mytextbox=="Serene Air"){
+
+					child = 3000;
+					youth = 4500;
+					elder = 6000;
+
+				}
+
+
+			}else if(my=="Business class"){
+
+				if(mytextbox=="PIA"){
+
+					child = 2000;
+					youth = 3000;
+					elder = 4500;
+
+
+				}else if(mytextbox=="Airblue"){
+
+					child = 2500;
+					youth = 3500;
+					elder = 5000;
+
+				}else if(mytextbox=="Askari Aviation"){
+
+					child = 3000;
+					youth = 4000;
+					elder = 5500;
+
+				}else if(mytextbox=="Shaheen Airlines"){
+
+					child = 3500;
+					youth = 4500;
+					elder = 6000;
+
+				}else if(mytextbox=="Serene Air"){
+
+					child = 4000;
+					youth = 5000;
+					elder = 6500;
+
+				}
+
+
+
+			}else if(my=="First class"){
+				if(mytextbox=="PIA"){
+
+					child = 2500;
+					youth = 3500;
+					elder = 5000;
+
+
+				}else if(mytextbox=="Airblue"){
+
+					child = 3000;
+					youth = 4000;
+					elder = 5500;
+
+				}else if(mytextbox=="Askari Aviation"){
+
+					child = 3500;
+					youth = 4500;
+					elder = 6000;
+
+				}else if(mytextbox=="Shaheen Airlines"){
+
+					child = 4000;
+					youth = 5000;
+					elder = 6500;
+
+				}else if(mytextbox=="Serene Air"){
+
+					child = 4500;
+					youth = 5500;
+					elder = 7000;
+
+				}
+
+
+
+			}// if else condition end here
+			
+			
+			var eldramount = eldr * elder;
+			var youthamount = yth * youth;
+			var childamount = chd * child;
+
+			document.getElementById('eamount').innerHTML= eldramount + " PKR";
+			document.getElementById('yamount').innerHTML= youthamount + " PKR";
+			document.getElementById('camount').innerHTML= childamount + " PKR";
+
+			document.getElementById('days').innerHTML= diffDays + " DAYS";
+
+			var totalamount= parseInt(eldramount) + parseInt(youthamount)  + parseInt(childamount);
+			document.getElementById('total').innerHTML= totalamount + " PKR";
+
+
+
+
+
+			}
+			
+			
+			
+			</script>
+</center>
+<!-- <script>
+	$(function () {
+  $("#app").on("click", function () {
+    setTimeout(function () {
+      $("#message").addClass("sending").text("Sending");
+      $("#send_btn").addClass("sending");
+    }, 0);
+
+    setTimeout(function () {
+      $("#message").addClass("sent").text("Sent");
+      $("#send_btn").addClass("sent");
+    }, 2600);
+
+    setTimeout(function () {
+      $("#message").removeClass("sent").text("Sent");
+      $("#send_btn").removeClass("sent");
+      $("#message").removeClass("sending").text("Send");
+      $("#send_btn").removeClass("sending");
+    }, 3600);
+  });
+});
+
+</script> -->
+
+
+
+
+<br><br><br><br>
+<!-- footer -->
+<footer>
+	<div class="container">
+		<div class="footer-top">
+			<div class="row">
+				<div class="col-md-6 col-lg-3 about-footer">
+					<div class="boxxxx">
+					<div class="headds">
+						<h2 style="font-size: 80px;">T/G</h2>
+						<h2 style="font-size: 80px;">T/G</h2>
+					</div>
+				</div>
+					<!-- <ul>
+						<li><a href="tel:0317-1164028"><i class="fas fa-phone fa-flip-horizontal"></i>0317-1164028</a></li>
+						<li><i class="fas fa-map-marker-alt"></i>
+							1 / 105 Bay Lights,
+							<br/>Lorem Ipsum,
+							<br/>LIC 3201
+						</li>
+					</ul> -->
+					<!-- <a href="" class="btn red-btn">Book Now</a> -->
+				</div>
+				<div class="col-md-6 col-lg-2 page-more-info">
+					<div class="footer-title" style="margin-top: -30px;">
+						<h4><br> Links</h4>
+					</div>
+					<ul>
+						<li style="font-family: Aharoni;"><a href="index001.html">Home</a></li>
+						<li style="font-family: Aharoni;"><a href="about us.html">About</a></li>
+						<li style="font-family: Aharoni;"><a href="Shop.html">Shop</a></li>
+						<li style="font-family: Aharoni;"><a href="blogs.html">Blog</a></li>
+						<li style="font-family: Aharoni;"><a href="contactus.html">Contact</a></li>
+					</ul>
+				</div>
+					<div class="col-md-6 col-lg-3 page-more-info">
+					<div class="footer-title">
+						<h4>Nwes letter</h4>
+					</div>
+					<div class="ee">
+						<b><ion-icon name="mail"></ion-icon></b>
+						<input type="email" placeholder="Enter Your Email id" required>
+						<button type="submit"><b><ion-icon name="arrow-redo-circle"></b></ion-icon></button>
+					</div>
+					<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+					<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+				</div>
+				<div class="col-md-6 col-lg-4 open-hours">
+					<div class="footer-title">
+						<h4>Open hours</h4>
+						<ul class="footer-social">
+							<li><a href="" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="" target="_blank"><i class="fab fa-youtube"></i></a></li>
+
+						</ul>
+					</div>
+					<table class="table" >
+						<tbody>
+							<tr>
+								<td  style="font-family: Aharoni;"><i class="far fa-clock"></i>Monday Thursday</td>
+								<td style="font-family: Miriam Fixed;">9:00am - 5:00pm</td>
+							</tr>
+							<tr>
+								<td style="font-family: Aharoni;"><i class="far fa-clock"></i>Friday</td>
+								<td style="font-family: Miriam Fixed;">9:00am - 4:00pm</td>
+							</tr>
+							<tr>
+								<td style="font-family: Aharoni;"><i class="far fa-clock"></i>Sturday</td>
+								<td style="font-family: Miriam Fixed;">9:00am - 1:30pm</td>
+							</tr>
+							<tr>
+								<td style="font-family: Aharoni;"><i class="far fa-clock"></i>Sunday</td>
+								<td style="font-family: Miriam Fixed;">9:30am - 12:00pm</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<div class="footer-logo">
+
+					<table>
+						<tbody>
+							<tr>
+								<td><img src="pexels9.jpg" style="width: 60px; height: 80px;"></td>
+								<td><img src="pexels10.jpg" style="width: 60px; height: 80px;"></td>
+								<td><img src="pexe.jpg" style="width: 60px; height: 80px;"></td>
+								<td><img src="pexels12.jpg" style="width: 60px; height: 80px;"></td>
+								<td><img src="pexels13.jpg" style="width: 60px; height: 80px;"></td>
+						</tbody>
+					</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="footer-bottom">
+			<div class="row" style="font-family: Miriam Fixed;">
+				<div class="col-sm-4" >
+					<a href="pravicy.html">Privacy policy</a>
+				</div>
+				<div class="col-sm-8">
+					<p>TOURISTS GALORE @ 2022 All rights reserved</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+	<!-- Our AOS DATA -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	  AOS.init({
+		offset: 330,
+		duration: 1000,
+	  });
+	</script>
+</body>
+</html>

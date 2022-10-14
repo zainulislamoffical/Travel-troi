@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TOURISTS GALORE - Shop</title>
+	<link rel="short icon" href="logo2.png">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="text.css">
+	<link rel="stylesheet" href="zoom.css">
+    <link rel="stylesheet" href="footerstyle.css">
+	<link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="cardsty.css">
+	<script src="cards.js" defer></script>
+    <style>
+		html{
+			scroll-behavior: smooth;
+		}
+		::-webkit-scrollbar{
+				width: 15px;
+			}
+			::-webkit-scrollbar-track{
+				background: #6600ff93;
+				border-radius: 1px;
+			}
+			::-webkit-scrollbar-thumb{
+				background: #00a2e29c;
+				border-radius: 50px;
+			}
+		body{
+			background:#ffffffd8 url("pex.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-blend-mode:saturation;
+		}
+		.headd{
+			position: relative;
+		}
+		.headd h2{
+			color: #e6e6e6;
+			font-size: 60px;
+			position: absolute;
+			font-family: "Cooper Black";
+			/* letter-spacing: 5px; */
+			margin-left: 95px;
+			margin-top: -5px;
+			transform: translate(-50%, -50%);
+		}
+		.headd h2:nth-child(1){
+			color: transparent;
+			-webkit-text-stroke: 4px #e6e6e6;
+		} 
+		.headd h2:nth-child(2){
+			color: #00b7ff;
+			animation: animate 3s ease-in-out infinite;
+		} 
+		@keyframes animate{
+			0%,
+			100%{
+				clip-path:polygon(
+					0% 45%,
+					16% 44%,
+					33% 50%,
+					54% 60%,
+					70% 61%,
+					84% 59%,
+					100% 52%,
+					100% 100%,
+					0% 100%
+				);
+			}
+			50%{
+				clip-path:polygon(
+					0% 60%,
+					15% 65%,
+					34% 66%,
+					51% 62%,
+					67% 50%,
+					84% 45%,
+					100% 46%,
+					100% 100%,
+					0% 100%
+				);
+			}
+		}
+		@media(max-width: 1040px){
+			.headd h2{
+				margin-top:3px;
+				font-size: 40px;
+				margin-left: 60px;
+			}
+		}
+		.searche{
+            position: absolute;
+            top: 18%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #2c3441;
+            height: 60px;
+            border-radius: 100px;
+            padding: 10px;
+        }
+        .searche:hover > input{
+            width: 400px;
+            padding: 0 10px;
+        }
+        .searche:hover > .icon{
+            background: #536179;
+        }
+        .icon:hover{
+            transform: rotate(360deg) scale(0.8);
+			color: #21dfcd
+        }
+        input{
+            width: 0;
+            border: none;
+            outline: none;
+            padding: 0;
+            background: none;
+            font-size: 1.1rem;
+            transition: 0.5s ease;
+            line-height: 40px;
+            color: #fff;
+        }
+        .icon{
+            color: #21dfcd;
+            float: right;
+            width: 40px;
+            font-size: 1.3rem;
+            height: 40px;
+            border-radius: 50%;
+            background: #2f3640;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+            cursor: pointer;
+            text-decoration: none;
+        }
+		@media(max-width: 888px){
+			.searche:hover > input{
+            width: 300px;
+        }
+		.searche:hover > .icon{
+           margin-top: -40px;
+        }
+		}
+		.cart-modal-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 2;
+    transform: translateX(-200%);
+    transition: .5s ease-out;
+    
+  }
+  
+  .cart-modal {
+    height: 100vh;
+    width: 50%;
+    background-color: hsl(0, 0%, 93%);
+    float: right;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  
+  #close-btn {
+    font-size: 2.5rem;
+    float: right;
+    margin: .5em 2em 0 0;
+    color: #000000;
+    cursor: pointer;
+  }
+  
+  .cart-is-empty {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    display: none;
+    
+  }
+  
+  .total {
+    text-align: center;
+    margin: 2em 0 2em 0;
+  /*   display: none; */
+  }
+  
+  .cart-total {
+    color: rgb(0, 0, 0);
+  }
+  
+  .total-price {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    display: block;
+  }
+  
+  .purchase-btn {
+    font-size: 2rem;
+    font-weight: bolder;
+    background-color: #00a2e29c;
+    color: white;
+    padding: 1em 2em;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 2em 0 1em 0;
+  }
+  
+  .product-rows {
+    margin-top: 3em;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  
+  .product-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-image {
+    width: 10rem;
+    margin: 1em;
+  }
+  
+  .cart-price {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+  
+  .product-quantity {
+    width: 4rem;
+    font-size: 2rem;
+    margin-left: 3rem;
+  }
+  
+  .remove-btn {
+    padding: 1em 2em;
+    background-color: red;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 3rem;
+    font-weight: bolder;
+    font-size: 1rem;
+  }
+  
+  .remove-btn:active {
+    transform: translateY(5px);
+  }
+  
+  @media (max-width: 1000px){
+    .cart-modal {
+      width: 90vw;
+	  margin-top: 320px;
+
+    } 
+    
+    .product-row {
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    
+    .remove-btn {
+      margin: 0
+    }
+    
+    .product-quantity {
+      margin: .5em 0 .5em 0
+    }
+  }
+  .bbb{
+	margin-top: -520px;
+	 margin-left: -800px;
+	 font-family: "Miriam Fixed";
+	 font-weight: bolder;
+	   font-size: 53px; 
+  }
+  @media (max-width: 1000px){
+	.bbb{
+	margin-top: -520px;
+	margin-left: 13px;
+  }
+  }
+  .vvv{
+	margin-top: 80px;
+	 margin-right: -780px;
+	 font-family: "Miriam Fixed";
+	 font-weight: bolder;
+	font-size: 53px;
+  }
+  @media (max-width: 1000px){
+	.vvv{
+		margin-top: 80px;
+	 margin-right: -20px;
+  }
+  }
+  .ra1{
+	margin-left:-270px; 
+	margin-top: 80px; 
+	font-size: 25px; 
+	font-family: "Algerian";
+  }
+  @media (max-width: 1000px){
+	.ra1{
+		margin-left:-100px; 
+	font-size: 15px;
+  }
+}
+.ra2{
+	margin-left:500px;
+	margin-top: -50px; 
+	font-size: 25px; 
+	font-family: "Algerian";
+}
+@media (max-width: 1000px){
+	.ra2{
+		margin-left:200px;
+		font-size: 15px; 
+		margin-top: -38px; 
+  }
+}
+.NA{
+	margin-left:-270px;
+	 font-size: 15px;
+	  padding:6px;
+}
+@media (max-width: 1000px){
+	.NA{
+		margin-left:-100px;
+		font-size: 8px; 
+  }
+}
+.NB{
+	margin-left:500px;  
+	margin-top: -45px; 
+	font-size: 15px;
+}
+@media (max-width: 1000px){
+	.NB{
+		margin-left:200px;  
+		font-size: 10px;
+		margin-top: -30px; 
+  }
+}
+.btn{
+	width: 165px;
+	 font-size: 18px;
+}
+@media (max-width: 1000px){
+	.btn{
+		width: 295px;
+	 font-size: 18px;
+  }
+}
+	</style>
+</head>
+<body>
+	
+ <!-- header start -->
+ <header class="header">
+ 	<div class="container">
+ 		<div class="row v-center">
+ 			<div class="header-item item-left">
+				<div class="headd">
+					<h2>T/G</h2>
+					<h2>T/G</h2>
+				</div>
+ 			</div>
+ 			<!-- menu start here -->
+ 			<div class="header-item item-center">
+ 				<div class="menu-overlay">
+ 				</div>
+ 				<nav class="menu">
+ 					<div class="mobile-menu-head">
+ 						<div class="go-back"><i class="fa fa-angle-left"></i></div>
+ 						<div class="current-menu-title"></div>
+ 						<div class="mobile-menu-close">&times;</div>
+ 					</div>
+ 					<ul class="menu-main">
+ 						<li>
+ 							<a href="index001.html">Home</a>
+ 						</li>
+						 <li>
+							<a href="about us.html">About</a>
+						</li>
+						<li class="menu-item-has-children">
+                            <a href="Shop.html">Shop </a>
+							<!-- <a href="#">News & Views <i class="fa fa-angle-down"></i></a> -->
+							<!-- <div class="sub-menu mega-menu mega-menu-column-4">
+								<div class="list-item text-center">
+									<a href="#">
+									<img src="img/p1.jpg" alt="new Product">
+									<h4 class="title">Product 1</h4>
+									</a>
+								</div>
+								<div class="list-item text-center">
+									<a href="#">
+									<img src="img/p2.jpg" alt="new Product">
+									<h4 class="title">Product 2</h4>
+									</a>
+								</div>
+								<div class="list-item text-center">
+									<a href="#">
+									<img src="img/p3.jpg" alt="new Product">
+									<h4 class="title">Product 3</h4>
+									</a>
+								</div>
+								<div class="list-item text-center">
+									<a href="#">
+									<img src="img/p4.jpg" alt="new Product">
+									<h4 class="title">Product 4</h4>
+								   </a>
+								</div>
+							</div> -->
+						</li>
+						<li class="menu-item-has-children">
+							<a href="travals.html">Booking</a>
+							<!-- <div class="sub-menu mega-menu mega-menu-column-4">
+							  <div class="list-item"> -->
+									<!-- <h4 class="title">Men's Fashion</h4> -->
+									<!-- <ul>
+										 <li><a href="#">Skardu</a></li>
+										 <li><a href="#">Islamabad</a></li>
+										 <li><a href="#">Kalasha Valleys</a></li>
+										 <li><a href="#">Hunza</a></li>
+										 <li><a href="#">Peshawar</a></li>
+										 
+									</ul> -->
+									<!-- <h4 class="title">Beauty</h4> -->
+									<!-- <ul>
+								   <li><a href="#">Gojal Valley</a></li>
+								   <li><a href="#">Naltar Valley, Gilgit</a></li>
+								   <li><a href="#">Lahore</a></li>
+								   <li><a href="#">Phandar Valley, Ghizer</a></li>
+								   <li><a href="#">Gwadar</a></li>
+									</ul>
+							  </div> -->
+							  <!-- <div class="list-item">
+								  <h4 class="title">Women's Fashion</h4>
+								  <ul>
+								   <div class="list-item">
+									   <img src="img/shop1.jpg" alt="shop">
+								  </div>
+									</ul>
+									<h4 class="title">Furniture</h4>
+								  <ul>
+								   <div class="list-item">
+									   <img src="img/shop1.jpg" alt="shop">
+								  </div>
+									</ul>
+							  </div>
+							  <div class="list-item">
+								  <h4 class="title">Home, Kitchen</h4>
+								  <ul>
+										<div class="list-item">
+								   <img src="img/shop1.jpg" alt="shop">
+							  </div>
+									</ul>
+							  </div> -->
+						</li>
+ 						<li class="menu-item-has-children">
+ 							<a href="blogs.html">Blog</i></a>
+ 							<!-- <a href="#">Blog <i class="fas fa-angle-down"></i></a> -->
+ 							<!-- <div class="sub-menu single-column-menu">
+ 								<ul>
+ 									<li><a href="#">Standard Layout</a></li>
+ 									<li><a href="#">Grid Layout</a></li>
+ 									<li><a href="#">single Post Layout</a></li>
+ 								</ul>
+ 							</div> -->
+ 						</li>
+ 						<!-- <li class="menu-item-has-children">
+ 							<a href="#">Shop</a> -->
+ 							<!-- <a href="#">Pages <i class="fas fa-angle-down"></i></a> -->
+ 							<!-- <div class="sub-menu single-column-menu">
+ 								<ul>
+ 									<li><a href="#">Login & Sign Up</a></li>
+ 									<li><a href="#">Register</a></li>
+ 									<li><a href="#">FAQ</a></li>
+ 									<li><a href="#">404 Page</a></li>
+ 								</ul>
+ 							</div> -->
+ 						<!-- </li> -->
+ 						<!-- <li>
+ 							<a href="logn.html">Login & Sign Up</a>
+ 						</li> -->
+ 						<li>
+ 							<a href="contactus.html">Contact</a>
+ 						</li>
+ 					</ul>
+ 				</nav>
+ 			</div>
+ 			<!-- menu end here -->
+ 			<div class="header-item item-right">
+				<a href="logn.html"><i class='fas fa-user-circle' style='font-size:27px ; margin-left: -70px;'></i></a>
+					<!-- <i class="fa fa-shopping-cart" class="shopc" style=" font-size:30px;color:#585858; margin-top: -4px;"></i>
+					<p id="span" style="margin-left: -22px; color: white; margin-top: -1px; font-size: 11px;">
+						 -->
+						 <!--  cart modal  -->
+						 <div class="cart-modal-overlay">
+							<div class="cart-modal">
+							  <i id="close-btn" class="fas fa-times"></i>
+								<h1 class="cart-is-empty">Cart is empty</h1>
+							  
+								<div class="product-rows">
+									<p class="ra1">Product Name</p>
+									<p  class="ra2">Price</p>
+								</div>
+								<div class="total">
+									<div class="apd">
+										
+									</div>
+									
+								  <h1 class="cart-total" style=" font-family: Algerian;">TOTAL</h1>
+
+								  <p></p>
+									<span class="total-price"> PKR</span>
+									  <button class="purchase-btn">PURCHASE</button>
+								</div>
+							  </div>
+							</div>
+						<!--   end of cart modal -->
+						  <div class="cart-btn">
+							<i id="cart" class="fas fa-shopping-cart" style=" font-size:30px;color:#585858; margin-top: -4px;"></i>
+							  <span class ="cart-quantity" style="color: #000000; margin-top: -1px; font-size: 11px;"></span>
+						  </div>
+ 				<!-- <a href="#"><i class="fas fa-search"></i></a>
+ 				<a href="#"><i class="far fa-heart"></i></a>
+ 				<a href="#"><i class="fas fa-shopping-cart"></i></a> -->
+ 				<!-- mobile menu trigger -->
+ 				<div class="mobile-menu-trigger">
+ 					<span></span>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ </header>
+ <!-- header end -->
+
+ <!-- banner start -->
+ <section class="banner-section">
+ 	
+ </section>
+ <!-- banner end -->
+
+<script src="js/script.js"></script>
+
+<script>
+	// open cart modal
+const cart = document.querySelector('#cart');
+const cartModalOverlay = document.querySelector('.cart-modal-overlay');
+
+cart.addEventListener('click', () => {
+  if (cartModalOverlay.style.transform === 'translateX(-200%)'){
+    cartModalOverlay.style.transform = 'translateX(0)';
+  } else {
+    cartModalOverlay.style.transform = 'translateX(-200%)';
+  }
+})
+// end of open cart modal
+
+// close cart modal
+const closeBtn = document.querySelector ('#close-btn');
+
+closeBtn.addEventListener('click', () => {
+  cartModalOverlay.style.transform = 'translateX(-200%)';
+});
+
+cartModalOverlay.addEventListener('click', (e) => {
+  if (e.target.classList.contains('cart-modal-overlay')){
+    cartModalOverlay.style.transform = 'translateX(-200%)'
+  }
+})
+// end of close cart modal
+
+</script>
+<div class="searche">
+	<input type="text" placeholder="search...." style="font-size: 18px;">
+	<a href="#" class="icon">
+		<i class="fas fa-search" style="font-size: 20px;"></i>
+	</a>
+</div>
+<br><br><br><br>
+<!-- <center>
+    <hr style="width: 1100px; border-width: 3px; background-color: #00c3ff; margin-top: -500px; border-radius: 10px;"><br>
+</center> -->
+
+	<!-- <hr style="margin-top: -450px; width: 150px; border-width: 5px; background-color: #00c3ff; margin-left: 430px;"> -->
+    <!-- <hr style="margin-top: -80px;width: 80px; border-width: 5px; background-color: #00c3ff;  margin-left: 740px;"> -->
+	
+	<h1 class="bbb" style=" color: #360088; text-transform: uppercase;" data-aos="fade-up">camping <i style="color: #00c3ff; text-transform: uppercase; font-family: Miriam Fixed; font-weight: 900;">t</i>ent</h1>
+    <br><br>
+
+    
+	<div class="cont">
+
+	 
+		<div class="products-container">
+	 
+		   <div class="product" data-name="p-1" data-aos="fade-up">
+			  <img src="camptent.jpg" alt="">
+			  <h3>Outdoor High Quality Automatic Camping Tents</h3>
+			  <div class="price">Rs. 8,000</div>
+		   </div>
+	 
+		   <div class="product" data-name="p-2" data-aos="fade-up">
+			  <img src="camptent1.jpg" alt="">
+			  <h3 >Hydraulic Waterproof Double Layer Tents</h3>
+			  <div class="price">Rs. 10,000</div>
+		   </div>
+	 
+		   <div class="product" data-name="p-3" data-aos="fade-up">
+			  <img src="camptent2.jpg" alt="">
+			  <h3>Polyester Camping Tent</h3>
+			  <div class="price">Rs. 3,649</div>
+		   </div>
+
+	 
+			<br><br><br><br><br>
+			<h1 class="vvv" style="  color: #360088; text-transform: uppercase;" data-aos="fade-up">camping <i style="color: #00c3ff; text-transform: uppercase;">b</i>ags</h1>
+			<br><br><br><br><br><br>
+			<br><br><br><br><br><br>
+			<br>
+
+		   <div class="product" data-name="p-4" data-aos="fade-up">
+			  <img src="campbag.jpg" alt="">
+			  <h3>50-L Dominance Backpack</h3>
+			  <div class="price">Rs. 4,064</div>
+		   </div>
+	 
+		   <div class="product" data-name="p-5" data-aos="fade-up">
+			  <img src="campbag1.jpg" alt="">
+			  <h3>High Quality Backpack for men</h3>
+			  <div class="price">Rs. 2,425</div>
+		   </div>
+	 
+		   <div class="product" data-name="p-6" data-aos="fade-up">
+			  <img src="campbag2.jpg" alt="">
+			  <h3>Outdoor Travel Waterproof Backpack</h3>
+			  <div class="price">Rs. 4,870</div>
+		   </div>
+	 
+		</div>
+	 
+	 </div>
+	 
+	 <div class="products-preview">
+	 
+		<div class="preview" data-target="p-1"  data-name="Outdoor High Quality Automatic Camping Tents"  data-price="8000">
+		   <i class="fas fa-times"></i>
+		   <img src="camptent.jpg" alt="">
+		   <h3>Outdoor High Quality Automatic Camping Tents</h3>
+		   <div class="stars">
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <span>( 300 )</span>
+		   </div>
+		   <p>Brand Name: Outdoor High QualityTents 4 people Automatic Tents Camping Tents
+			is_customized:Yes
+			Area:200*200*145cm
+			Fabric:reflective mylar material
+			Layers:N.A
+			Structure:N.A
+			Outside Tent Waterproof Index: N.A</p>
+		   <div class="price">Rs. 8,000</div>
+		   <div class="buttons">
+			  <a href="#" class="buy">buy now</a>
+              <button  type="button" name="button" id="btn" onclick="cot()" class="btn btn-outline-danger">Add to Cart</button>
+		   </div>
+		</div>
+	 
+		<div class="preview" data-target="p-2" data-name="Hydraulic Waterproof Double Layer Tents" data-price="10000">
+		   <i class="fas fa-times"></i>
+		   <img src="camptent1.jpg" alt="">
+		   <h3>Hydraulic Waterproof Double Layer Tents</h3>
+		   <div class="stars">
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star-half-alt"></i>
+			  <span>( 250 )</span>
+		   </div>
+		   <p>3-4 person Camping Tent Hydraulic Waterproof Double Layer Tents Ultralight Outdoor Hiking Picnic Quick Automatic Opening Tent</p>
+		   <div class="price">Rs. 10,000</div>
+		   <div class="buttons">
+			  <a href="#" class="buy">buy now</a>
+              <button  type="button" name="button" id="btn" onclick="cot()" class="btn btn-outline-danger" >Add to Cart</button>
+		   </div>
+		</div>
+	 
+		<div class="preview" data-target="p-3" data-name="Polyester Camping Tent" data-price="3649">
+		   <i class="fas fa-times"></i>
+		   <img src="camptent2.jpg" alt="">
+		   <h3>Polyester Camping Tent</h3>
+		   <div class="stars">
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star-half-alt"></i>
+			  <span>( 230 )</span>
+		   </div>
+		   <p>Polyester,Polyurethane Spacious Design: Go camping without skimping on space. This motorcycle camping tent is designed with floor size of 159.4"x84.6" (sleep area: 84.6"x84.6") and 66.9" center height for maximum comfort. The large storage space allows 2-3 persons to sleep comfortably, with room for a full-sized motorcycle and equipment.</p>
+		   <div class="price" >Rs. 3,649</div>
+		   <div class="buttons">
+			  <a href="#" class="buy">buy now</a>
+              <button  type="button" name="button" id="btn" onclick="cot()" class="btn btn-outline-danger" >Add to Cart</button>
+		   </div>
+		</div>
+	 
+		<div class="preview" data-target="p-4"  data-name="50-L Dominance Backpack" data-price="4064">
+		   <i class="fas fa-times"></i>
+		   <img src="campbag.jpg" alt="">
+		   <h3>50-L Dominance Backpack</h3>
+		   <div class="stars">
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <span>( 420 )</span>
+		   </div>
+		   <p>Striking color combination.
+			High grade tear and abrasion resistant fabric.
+			Spacious and lightweight.
+			Multi-position torso adjustment on the top and bottom for custom fit.
+			Open-cell foam lumbar pad and molded channels for maximum comfort and cushioning.
+			Adjustable thickly padded split waist belt.
+			Built in laptop sleeve.
+			small inner pocket for your smaller stuff.</p>
+		   <div class="price">Rs. 4,064</div>
+		   <div class="buttons">
+			  <a href="#" class="buy">buy now</a>
+              <button  type="button" name="button" Class="btn" id="btn" onclick="cot()" class="btn btn-outline-danger" >Add to Cart</button>
+		   </div>
+		</div>
+	 
+		<div class="preview" data-target="p-5"  data-name="High Quality Backpack for men" data-price="2425">
+		   <i class="fas fa-times"></i>
+		   <img src="campbag1.jpg" alt="">
+		   <h3>High Quality Backpack for men</h3>
+		   <div class="stars">
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star-half-alt"></i>
+			  <span>( 240 )</span>
+		   </div>
+		   <p>Sleek and stylish Dominance original 45-Liter Backpack - IBEX. Spacious and lightweight, this bag is a perfect trekking/camping/traveling companion. Best Quality backpack
+			Buy Men Bags Backpacks In Pakistan At Best Price Online With Dominance.pk.
+			Attractive and practical. This backpack is spacious, comfortable and will be a perfect travel partner.</p>
+		   <div class="price">Rs. 2,425</div>
+		   <div class="buttons">
+			  <a href="#" class="buy">buy now</a>
+              <button  type="button" name="button"  Class="btn" id="btn" onclick="cot()" class="btn btn-outline-danger" >Add to Cart</button>
+		   </div>
+		</div>
+	 
+		<div class="preview" data-target="p-6" data-name="Outdoor Travel Waterproof Backpack" data-price="4870" >
+		   <i class="fas fa-times"></i>
+		   <img src="campbag2.jpg" alt="">
+		   <h3 > Outdoor Travel Waterproof Backpack</h3>
+		   <div class="stars">
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star-half-alt"></i>
+			  <span>( 280 )</span>
+		   </div>
+		   <p>The shoulder straps are padded and can be adjustable with loops,Grab top handle,Wearable and Durable.
+			High quality, Water-proof, Large Capacity
+			Movement: Hiking,Camping,Traveling,Skiing,Rock Climbing,Running,Exercising ect.
+			Gender: Men and women
+			Material: High Quality Waterproof Nylon
+			Color: Grey, Rose red, Blue, Green, Purple</p>
+		   <div class="price" >Rs. 4,870</div>
+		   <div class="buttons">
+			  <a href="#" class="buy">buy now</a>
+              <button  type="button" name="button"  Class="btn" id="btn" onclick="cot()" class="btn btn-outline-danger" >Add to Cart</button>
+		   </div>
+		</div>
+	 
+	 </div>
+	 <script type="text/javascript">
+		var btn = document.getElementById("btn");
+		var span = document.getElementById("span");
+		let count=0
+		function cot(){
+			count+=1
+			document.getElementById("span").innerHTML=count;
+			console.log(count);
+		}
+	  </script>
+	
+
+	<br><br><br>
+<!-- footer -->
+<footer>
+	<div class="container">
+		<div class="footer-top">
+			<div class="row">
+				<div class="col-md-6 col-lg-3 about-footer">
+					<div class="boxxxx">
+					<div class="headds">
+						<h2 style="font-size: 80px;">T/G</h2>
+						<h2 style="font-size: 80px;">T/G</h2>
+					</div>
+				</div>
+					<!-- <ul>
+						<li><a href="tel:0317-1164028"><i class="fas fa-phone fa-flip-horizontal"></i>0317-1164028</a></li>
+						<li><i class="fas fa-map-marker-alt"></i>
+							1 / 105 Bay Lights,
+							<br/>Lorem Ipsum,
+							<br/>LIC 3201
+						</li>
+					</ul> -->
+					<!-- <a href="" class="btn red-btn">Book Now</a> -->
+				</div>
+				<div class="col-md-6 col-lg-2 page-more-info">
+					<div class="footer-title" style="margin-top: -30px;">
+						<h4><br> Links</h4>
+					</div>
+					<ul>
+						<li style="font-family: Aharoni;"><a href="index001.html">Home</a></li>
+						<li style="font-family: Aharoni;"><a href="about us.html">About</a></li>
+						<li style="font-family: Aharoni;"><a href="Shop.html">Shop</a></li>
+						<li style="font-family: Aharoni;"><a href="blogs.html">Blog</a></li>
+						<li style="font-family: Aharoni;"><a href="contactus.html">Contact</a></li>
+					</ul>
+				</div>
+					<div class="col-md-6 col-lg-3 page-more-info">
+					<div class="footer-title">
+						<h4>Nwes letter</h4>
+					</div>
+					<div class="ee">
+						<b><ion-icon name="mail"></ion-icon></b>
+						<input type="email" placeholder="Enter Your Email id" required>
+						<button type="submit"><b><ion-icon name="arrow-redo-circle"></b></ion-icon></button>
+					</div>
+					<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+					<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+				</div>
+				<div class="col-md-6 col-lg-4 open-hours">
+					<div class="footer-title">
+						<h4>Open hours</h4>
+						<ul class="footer-social">
+							<li><a href="" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="" target="_blank"><i class="fab fa-youtube"></i></a></li>
+
+						</ul>
+					</div>
+					<table class="table" >
+						<tbody>
+							<tr>
+								<td  style="font-family: Aharoni;"><i class="far fa-clock"></i>Monday Thursday</td>
+								<td style="font-family: Miriam Fixed;">9:00am - 5:00pm</td>
+							</tr>
+							<tr>
+								<td style="font-family: Aharoni;"><i class="far fa-clock"></i>Friday</td>
+								<td style="font-family: Miriam Fixed;">9:00am - 4:00pm</td>
+							</tr>
+							<tr>
+								<td style="font-family: Aharoni;"><i class="far fa-clock"></i>Sturday</td>
+								<td style="font-family: Miriam Fixed;">9:00am - 1:30pm</td>
+							</tr>
+							<tr>
+								<td style="font-family: Aharoni;"><i class="far fa-clock"></i>Sunday</td>
+								<td style="font-family: Miriam Fixed;">9:30am - 12:00pm</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<div class="footer-logo">
+
+					<table>
+						<tbody>
+							<tr>
+								<td><img src="pexels9.jpg" style="width: 60px; height: 80px;"></td>
+								<td><img src="pexels10.jpg" style="width: 60px; height: 80px;"></td>
+								<td><img src="pexe.jpg" style="width: 60px; height: 80px;"></td>
+								<td><img src="pexels12.jpg" style="width: 60px; height: 80px;"></td>
+								<td><img src="pexels13.jpg" style="width: 60px; height: 80px;"></td>
+						</tbody>
+					</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="footer-bottom">
+			<div class="row" style="font-family: Miriam Fixed;">
+				<div class="col-sm-4" >
+					<a href="pravicy.html">Privacy policy</a>
+				</div>
+				<div class="col-sm-8">
+					<p>TOURISTS GALORE @ 2022 All rights reserved</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+	<script>
+
+		$(document).ready(function(){
+
+			$(".btn").click(function(){
+				let previewBox = preveiwContainer.querySelectorAll('.preview.active');
+
+						previewBox.forEach(preview =>{
+							let target = preview.getAttribute('data-target');
+							let name = preview.getAttribute('data-name');
+							let Price = preview.getAttribute('data-price');
+							
+							$('.apd').append('<p class="NA">'+name+'</p><p class="NB">'+Price+'</p>'); 
+							
+							let tot = price + ra2;
+							document.getElementById("total-price").value;
+									
+
+							alert(name);
+						});
+
+				
+
+
+			});
+
+
+
+
+		});
+
+	</script>
+	<!-- Our AOS DATA -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+	offset: 330,
+	duration: 1000,
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TOURISTS GALORE - Home</title>
+	<link rel="short icon" href="logo2.png">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="text.css">
+	<link rel="stylesheet" href="zoom.css">
+	<link rel="stylesheet" href="footerstyle.css">
+	<link rel="stylesheet" href="progresscircle.css">
+	<style>
+		html{
+			scroll-behavior: smooth;
+		}
+		::-webkit-scrollbar{
+				width: 15px;
+			}
+			::-webkit-scrollbar-track{
+				background: #6600ff93;
+				border-radius: 1px;
+			}
+			::-webkit-scrollbar-thumb{
+				background: #00a2e29c;
+				border-radius: 50px;
+			}
+		body{
+			background:#ffffffd8 url("pex.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-blend-mode:saturation;
+		}
+		.headd{
+			position: relative;
+		}
+		.headd h2{
+			color: #e6e6e6;
+			font-size: 60px;
+			position: absolute;
+			font-family: "Cooper Black";
+			/* letter-spacing: 5px; */
+			margin-left: 95px;
+			margin-top: -5px;
+			transform: translate(-50%, -50%);
+		}
+		.headd h2:nth-child(1){
+			color: transparent;
+			-webkit-text-stroke: 4px #e6e6e6;
+		} 
+		.headd h2:nth-child(2){
+			color: #00b7ff;
+			animation: animate 3s ease-in-out infinite;
+		} 
+		@keyframes animate{
+			0%,
+			100%{
+				clip-path:polygon(
+					0% 45%,
+					16% 44%,
+					33% 50%,
+					54% 60%,
+					70% 61%,
+					84% 59%,
+					100% 52%,
+					100% 100%,
+					0% 100%
+				);
+			}
+			50%{
+				clip-path:polygon(
+					0% 60%,
+					15% 65%,
+					34% 66%,
+					51% 62%,
+					67% 50%,
+					84% 45%,
+					100% 46%,
+					100% 100%,
+					0% 100%
+				);
+			}
+		}
+		@media(max-width: 1040px){
+			.headd h2{
+				margin-top:3px;
+				font-size: 40px;
+				margin-left: 60px;
+			}
+		}
+		.searche{
+            position: absolute;
+            top: 18%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #2c3441;
+            height: 60px;
+            border-radius: 100px;
+            padding: 10px;
+        }
+        .searche:hover > input{
+            width: 400px;
+            padding: 0 10px;
+        }
+        .searche:hover > .icon{
+            background: #536179;
+        }
+        .icon:hover{
+            transform: rotate(360deg) scale(0.8);
+			color: #21dfcd
+        }
+        input{
+            width: 0;
+            border: none;
+            outline: none;
+            padding: 0;
+            background: none;
+            font-size: 1.1rem;
+            transition: 0.5s ease;
+            line-height: 40px;
+            color: #fff;
+        }
+        .icon{
+            color: #21dfcd;
+            float: right;
+            width: 40px;
+            font-size: 1.3rem;
+            height: 40px;
+            border-radius: 50%;
+            background: #2f3640;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+            cursor: pointer;
+            text-decoration: none;
+        }
+		@media(max-width: 888px){
+			.searche:hover > input{
+            width: 300px;
+        }
+		.searche:hover > .icon{
+           margin-top: -40px;
+        }
+		}
+		:root {
+    --bg: #0f0c19;
+  
+    --card-radius: 0.6rem;
+  
+    --card-border: 0.08rem solid rgba(255, 255, 255, 0.2);
+  
+    --card-shadow: 0.2rem 0.1rem 0.5rem rgba(0, 0, 0, 0.1);
+  
+    --gradient-1: linear-gradient(135deg, #79960c, #f2e690);
+  
+    --gradient-2: linear-gradient(135deg, #8c366c, #6e64e7);
+  
+    --gradient-3: linear-gradient(135deg, #0f3443, #34e89e);
+  }
+  
+
+  
+  .wrapper{
+    position: relative;
+    width: 16rem;
+    height: 280px;
+    /* height: 100px; */
+	margin-left: 350px; 
+	margin-top: -525px;
+    aspect-ratio: 3.37/2.125;
+    }
+  
+  .card {
+    background-color: rgba(128, 128, 128, 0.116);
+    position: relative;
+    width: 100%;
+    height: 110%;
+    background-image: linear-gradient(
+      135deg,
+      #ffffff66,
+      #ffffff1a
+    );
+  
+    border-radius: var(--card-radius);
+  
+    backdrop-filter: blur(0.6rem);
+  
+    border: var(--card-border);
+  
+    box-shadow: var(--card-shadow);
+  }
+  
+  .conten {
+    position: absolute;
+  
+    width: 100%;
+  
+    height: 100%;
+  
+    padding: 1rem;
+  
+    opacity: 0.7;
+  
+    color: black;
+  
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card img {
+    width: 2rem;
+  
+    filter: invert(1);
+  
+    margin: 1rem 1rem;
+    
+  }
+  
+  .card p {
+    text-align: center;
+    
+  }
+  
+  .card h5 {
+    position: absolute;
+  
+    top: 1rem;
+  
+    right: 1rem;
+  }
+  
+  .circle {
+    border-radius: 50%;
+  
+    position: absolute;
+  }
+  
+  .circle1 {
+    width: 3rem;
+  
+    height: 3rem;
+  
+    left: 60%;
+    top: -20%;
+  
+    background-image: var(--gradient-1);
+  }
+  
+  .circle2 {
+    width: 5rem;
+  
+    height: 5rem;
+  
+    left: -20%;
+  
+    top: 29%;
+  
+    background-image: var(--gradient-2);
+  }
+  
+  .circle3 {
+    width: 7rem;
+  
+    height: 7rem;
+  
+    right: -11%;
+  
+    top: 72%;
+  
+    background-image: var(--gradient-3);
+  }
+  @media(max-width: 1040px){
+    .wrapper{
+		margin-left: 65px; 
+		margin-top: 205px;
+		width: 15rem;
+      	height: 290px;
+      }
+  }
+  .snip {
+  font-family: "Algerian";
+  outline: 1px solid rgba(255, 255, 255, .5);
+  outline-offset: -15px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 8px;
+  min-width: 220px;
+  max-width: 260px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: left;
+  font-size: 16px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  margin-top: -115px;
+  margin-left: -830px; 
+  height: 343px;
+}
+.snip * {
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.snip img {
+  max-width: 100%;
+  vertical-align: top;
+}
+.snip figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.snip h3 {
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 3px 0;
+}
+.snip .title1 {
+  font-weight: 700;
+}
+.snip .title2 {
+  color: #a58e7c;
+  font-weight: 300;
+}
+.snip .title3 {
+  font-weight: 700;
+  font-size: 25px;
+}
+.snip a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.snip:hover img,
+.snip.hover img {
+  -webkit-transform: scale(1.3) rotate(5deg);
+  transform: scale(1.3) rotate(5deg);
+}
+
+@media(max-width: 1040px){
+	.snip {
+		margin-top: 50px;
+		margin-left: 12px;
+	}
+}
+.sty{
+		float: left; 
+		margin-left: 50px;
+	}
+@media(max-width: 1040px){
+	.sty{
+		margin-left: -8px;
+	}
+}
+	.og{
+		float: right; 
+		margin-right: 60px;
+	}
+	@media(max-width: 1040px){
+	.og{
+		margin-right: 28px;
+	}
+}
+	</style>
+</head>
+<body>
+	
+ <!-- header start -->
+ <header class="header">
+ 	<div class="container">
+ 		<div class="row v-center">
+ 			<div class="header-item item-left">
+				<div class="headd">
+					<h2>T/G</h2>
+					<h2>T/G</h2>
+				</div>
+ 			</div>
+ 			<!-- menu start here -->
+ 			<div class="header-item item-center">
+ 				<div class="menu-overlay">
+ 				</div>
+ 				<nav class="menu">
+ 					<div class="mobile-menu-head">
+ 						<div class="go-back"><i class="fa fa-angle-left"></i></div>
+ 						<div class="current-menu-title"></div>
+ 						<div class="mobile-menu-close">&times;</div>
+ 					</div>
+ 					<ul class="menu-main">
+ 						<li>
+ 							<a href="index001.html">Home</a>
+ 						</li>
+						 <li>
+							<a href="about us.html">About</a>
+						</li>
+ 						<li class="menu-item-has-children">
+ 							<a href="Shop.html">Shop </a>
+ 							<!-- <a href="#">News & Views <i class="fa fa-angle-down"></i></a> -->
+ 							<!-- <div class="sub-menu mega-menu mega-menu-column-4">
+ 								<div class="list-item text-center">
+ 									<a href="#">
+ 									<img src="img/p1.jpg" alt="new Product">
+ 									<h4 class="title">Product 1</h4>
+ 									</a>
+ 								</div>
+ 								<div class="list-item text-center">
+ 									<a href="#">
+ 									<img src="img/p2.jpg" alt="new Product">
+ 									<h4 class="title">Product 2</h4>
+ 									</a>
+ 								</div>
+ 								<div class="list-item text-center">
+ 									<a href="#">
+ 									<img src="img/p3.jpg" alt="new Product">
+ 									<h4 class="title">Product 3</h4>
+ 									</a>
+ 								</div>
+ 								<div class="list-item text-center">
+ 									<a href="#">
+ 									<img src="img/p4.jpg" alt="new Product">
+ 									<h4 class="title">Product 4</h4>
+ 								   </a>
+ 								</div>
+ 							</div> -->
+ 						</li>
+ 						<li class="menu-item-has-children">
+							<a href="travals.html">Booking</a>
+ 							<!-- <div class="sub-menu mega-menu mega-menu-column-4">
+                               <div class="list-item"> -->
+                               	  <!-- <h4 class="title">Men's Fashion</h4> -->
+                               	  <!-- <ul>
+                               	  	 <li><a href="#">Skardu</a></li>
+                               	  	 <li><a href="#">Islamabad</a></li>
+                               	  	 <li><a href="#">Kalasha Valleys</a></li>
+                               	  	 <li><a href="#">Hunza</a></li>
+                               	  	 <li><a href="#">Peshawar</a></li>
+                               	  	 
+                               	  </ul> -->
+                               	  <!-- <h4 class="title">Beauty</h4> -->
+                               	  <!-- <ul>
+									<li><a href="#">Gojal Valley</a></li>
+									<li><a href="#">Naltar Valley, Gilgit</a></li>
+									<li><a href="#">Lahore</a></li>
+									<li><a href="#">Phandar Valley, Ghizer</a></li>
+									<li><a href="#">Gwadar</a></li>
+                               	  </ul>
+                               </div> -->
+                               <!-- <div class="list-item">
+                               	<h4 class="title">Women's Fashion</h4>
+                               	<ul>
+									<div class="list-item">
+										<img src="img/shop1.jpg" alt="shop">
+								   </div>
+                               	  </ul>
+                               	  <h4 class="title">Furniture</h4>
+                               	<ul>
+									<div class="list-item">
+										<img src="img/shop1.jpg" alt="shop">
+								   </div>
+                               	  </ul>
+                               </div>
+                               <div class="list-item">
+                               	<h4 class="title">Home, Kitchen</h4>
+                               	<ul>
+                               	  	<div class="list-item">
+                               	 <img src="img/shop1.jpg" alt="shop">
+                               </div>
+                               	  </ul>
+                               </div> -->
+ 						</li>
+ 						<li class="menu-item-has-children">
+ 							<a href="blogs.html">Blog</i></a>
+ 							<!-- <a href="#">Blog <i class="fas fa-angle-down"></i></a> -->
+ 							<!-- <div class="sub-menu single-column-menu">
+ 								<ul>
+ 									<li><a href="#">Standard Layout</a></li>
+ 									<li><a href="#">Grid Layout</a></li>
+ 									<li><a href="#">single Post Layout</a></li>
+ 								</ul>
+ 							</div> -->
+ 						</li>
+ 						<!-- <li class="menu-item-has-children">
+ 							<a href="#">Shop</a> -->
+ 							<!-- <a href="#">Pages <i class="fas fa-angle-down"></i></a> -->
+ 							<!-- <div class="sub-menu single-column-menu">
+ 								<ul>
+ 									<li><a href="#">Login & Sign Up</a></li>
+ 									<li><a href="#">Register</a></li>
+ 									<li><a href="#">FAQ</a></li>
+ 									<li><a href="#">404 Page</a></li>
+ 								</ul>
+ 							</div> -->
+ 						<!-- </li> -->
+ 						<!-- <li>
+ 							<a href="logn.html">Login & Sign Up</a>
+ 						</li> -->
+ 						<li>
+ 							<a href="contactus.html">Contact</a>
+ 						</li>
+ 					</ul>
+ 				</nav>
+ 			</div>
+ 			<!-- menu end here -->
+ 			<div class="header-item item-right">
+				<a href="logn.html"><i class='fas fa-user-circle' style='font-size:27px'></i></a>
+ 				<!-- <a href="#"><i class="fas fa-search"></i></a>
+ 				<a href="#"><i class="far fa-heart"></i></a>
+ 				<a href="#"><i class="fas fa-shopping-cart"></i></a> -->
+ 				<!-- mobile menu trigger -->
+ 				<div class="mobile-menu-trigger">
+ 					<span></span>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ </header>
+ <!-- header end -->
+
+ <!-- banner start -->
+ <section class="banner-section">
+ 	
+ </section>
+ <!-- banner end -->
+
+<script src="js/script.js"></script>
+
+<div class="searche">
+	<input type="text" placeholder="search....">
+	<a href="#" class="icon">
+		<i class="fas fa-search"></i>
+	</a>
+</div>
+<br>
+
+
+<center>
+<div class="waviy" style="margin-top: -600PX;">
+	<span style="--i:1">W</span>
+	<span style="--i:2">E</span>
+	<span style="--i:3">L</span>
+	<span style="--i:4">L</span>
+	<span style="--i:5">C</span>
+	<span style="--i:6">O</span>
+	<span style="--i:7">M</span>
+	<span style="--i:8">E</span>
+	<span style="color: transparent;">.</span>
+	<span style="--i:9">I</span>
+	<span style="--i:10">N</span>
+	<br>
+	<span style="--i:1">T</span>
+	<span style="--i:2">O</span>
+	<span style="--i:3">U</span>
+	<span style="--i:4">R</span>
+	<span style="--i:5">I</span>
+	<span style="--i:6">S</span>
+	<span style="--i:7">T</span>
+	<span style="--i:8">S</span>
+	<span style="color: transparent;">.</span>
+	<span style="--i:1">G</span>
+	<span style="--i:2">A</span>
+	<span style="--i:3">L</span>
+	<span style="--i:4">O</span>
+	<span style="--i:5">R</span>
+	<span style="--i:6">E</span>
+   </div>
+</center>
+<div class="card-wrapper" data-aos="fade-up">
+	<div class="circle circle1" data-aos="fade-up"></div>
+	<div class="circle circle2" data-aos="fade-up"></div>
+	<div class="circle circle3" data-aos="fade-up"></div>
+	<div class="circle circle4" data-aos="fade-up"></div>
+	<div class="card">
+	   <div class="content">
+		  <h5 style="font-family: Miriam Fixed; font-size: 25px;">KARAKORAM</h5>
+		  <img src="" >               
+		  <p style="font-family: Baskerville Old Face;  font-size: 15px;">
+			K2 is a famous mountain (28,253ft/8612m) in the Karakoram mountain range, second only to Mount Everest in the world in terms of height above sea level.The K2 mountain is also very prominent; souring 13,179 feet (4017m) above it’s surrounding terrain – ranking it the 22nd most prominent mountain in the world (more prominent than Everest).
+		  </p >
+	   </div>
+	</div>
+ </div>
+ <figure class="snip1581"  data-aos="fade-up"><img src="kashmir.jpg"/>
+	<figcaption>
+	  <!-- <h3 class="title1">Kashmir</h3> -->
+	  <h3 class="title2" style="font-size: 25px; font-family: Miriam Fixed;">Karakoram</h3>
+	  <!-- <h3 class="title3">Kashmir</h3> -->
+	</figcaption><a href="#"></a>
+  </figure>
+
+<div class="wrapper"  data-aos="fade-up">
+	<div class="circle circle1" data-aos="fade-up"></div>
+	<div class="circle circle2" data-aos="fade-up"></div>
+	<div class="circle circle3" data-aos="fade-up"></div>
+	<div class="circle circle4" data-aos="fade-up"></div>
+	<div class="card">
+	   <div class="conten">
+		  <h5 style="font-family: Miriam Fixed; font-size: 25px;">Hunza valley</h5>
+		  <img src="" >               
+		  <p style="font-family: Baskerville Old Face; font-size: 15px;">
+			The Hunza Valley is located in the northern part of Pakistan and has borders with China and Afghanistan. Specifically, the Hunza Valley is located in the Gilgit-Baltistan region of Pakistan. Geographically, it is a mountainous region, which is regularly praised for its beautiful landscapes. A glimpse of Hunza valley make you sure that the view is worth seeing
+		  </p >
+	   </div>
+	</div>
+ </div>
+ <figure class="snip" data-aos="fade-up"><img src="val.jpg"/>
+	<figcaption>
+	  <!-- <h3 class="title1">Kashmir</h3> -->
+	  <h3 class="title2" style="font-size: 25px; font-family: Miriam Fixed;">Hunza valley</h3>
+	  <!-- <h3 class="title3">Kashmir</h3> -->
+	</figcaption><a href="#"></a>
+  </figure>
+
+ <br><br><br><br><br><br>
+ <h2 class="sty" style=" font-family: Miriam Fixed; font-size: 46px; color: #6600ff; font-weight: bolder;" data-aos="fade-up">Best <i style="color: #00b7ff;">Offers </i><br><i style="font-family: Miriam Fixed; font-weight: bolder; font-size: 26px; color: #6600ff;"> check out our top rated tours</i></h2>
+ <br><br><br><br><br><br>
+ <!-- <div class="big-box" style="border: 0px solid ; height: 180px; width: 1000px; margin-left: 60px; border-radius: 20px; border-top-right-radius: 100px; border-bottom-left-radius: 100px; background:#ffffffc5 url(wwww.PNG); background-size: cover; background-repeat: no-repeat;"></div> -->
+ <!-- <form>
+	<div class="form-row" style="margin-top: 10px; width: 650px; margin-left: 210px;">
+	  <div class="col">
+		<label style="float: left; margin: 10px; color: #360088; font-family: Aharoni; font-size: 18px;">Destination</label>
+		<hr style="width: 80px; border-width: 5px; background-color: #00c3ff; float: left; margin: 10px; margin-top: -8px; border-radius: 10px;"><br>
+		<input type="text" class="form-control" placeholder="Search Place" style="background-color: #ffffff57; border: 2px solid #360088; font-family: Copperplate Gothic Bold;" required>
+	  </div>
+	  <div class="col">
+		<label  style="float: left; margin: 10px; color: #360088; font-family: Aharoni; font-size: 18px;">Check-in date</label>
+		<hr style="width: 80px; border-width: 5px; background-color: #00c3ff; float: left; margin: 10px; margin-top: -8px; border-radius: 10px;"><br>
+		<input type="date" class="form-control" placeholder="Check In Date" style="background-color: #ffffff57; border: 2px solid #360088; font-family: Copperplate Gothic Bold;" required>
+	  </div>
+	  <div class="col">
+		<label  style="float: left; margin: 10px; color: #360088; font-family: Aharoni; font-size: 18px;">Check-out date</label>
+		<hr style="width: 80px; border-width: 5px; background-color: #00c3ff; float: left; margin: 10px; margin-top: -8px; border-radius: 10px;"><br>
+		<input type="date" class="form-control" placeholder="Check Out Date" style="background-color: #ffffff57; border: 2px solid #360088; font-family: Copperplate Gothic Bold;" required>
+	  </div>
+	  <div class="col">
+		<label  style="float: left; margin: 10px; color: #360088; font-family: Aharoni; font-size: 18px;">Month</label>
+		<hr style="width: 80px; border-width: 5px; background-color: #00c3ff; float: left; margin: 10px; margin-top: -8px; border-radius: 10px;"><br>
+		<input type="text" class="form-control" placeholder="Month" style="background-color: #ffffff57; border: 2px solid #360088; font-family: Copperplate Gothic Bold;" required>
+	  </div>
+	</div>
+	<button type="submit" class="btn btn-info" style="margin-left: 660px; margin-top: -64px; width: 180px;">Search</button>
+  </form> -->
+	<center>
+		<div class="carousel" data-aos="fade-up">
+			<ul class="carousel__list">
+			  <li class="carousel__item" data-pos="-2">1 <h4 class="srt" style="font-family: Algerian; color: white; text-transform: uppercase;">Gwadar</h4><br><h6 class="srp" style="  font-family: Aharoni; color: white;">PKR 21,150</h6></li>
+			  <li class="carousel__item" data-pos="-1">2 <h4 class="srt" style="font-family: Algerian; color: white; text-transform: uppercase;">Naltar <br> Valley</h4><br><h6 class="srpn" style=" font-family: Aharoni; color: white;">PKR 32,670</h6></li>
+			  <li class="carousel__item" data-pos="0">3 <h4 class="srt" style="font-family: Algerian; color: white; text-transform: uppercase;">Hunza</h4><br><h6 class="srph" style=" font-family: Aharoni; color: white;">PKR 37,800</h6></li>
+			  <li class="carousel__item" data-pos="1">4 <h4 class="srt" style="font-family: Algerian; color: white; text-transform: uppercase;">Kalasha <br> Valleys</h4><br><h6 class="srpk" style=" font-family: Aharoni; color: white;">PKR 69,480</h6></li>
+			  <li class="carousel__item" data-pos="2">5 <h4 class="srt" style="font-family: Algerian; color: white; text-transform: uppercase;">Skardu</h4><br><h6 class="srps" style=" font-family: Aharoni; color: white;">PKR 32,305</h6></li>
+			</ul>
+		  </div>
+		  <script src="package.js"></script>
+	</center>
+  <br><br><br><br><br>
+	<!-- <h2 style="float: left; margin-left: 50px; font-family:Algerian; font-size: 46px; color: #6600ff;">Where do <i style="color: #00b7ff;">you </i><br> want to go ?</h2> -->
+	<center>
+		<div class="wrappers" data-aos="fade-up">
+			<div class="cards">
+			  <div class="circle">
+				<div class="bar"></div>
+				<div class="box"><span></span></div>
+			  </div>
+			  <div class="text">Flight Booking</div>
+			</div>
+			<div class="cards ">
+			  <div class="circle">
+				<div class="bar"></div>
+				<div class="box"><span></span></div>
+			  </div>
+			  <div class="text">Ticket Booking</div>
+			</div>
+			<div class="cards">
+			  <div class="circle">
+				<div class="bar"></div>
+				<div class="box"><span></span></div>
+			  </div>
+			  <div class="text">Amazing Tour</div>
+			</div>
+		  </div>
+		  <script>
+			let options = {
+			  startAngle: -1.55,
+			  size: 150,
+			  value: 0.85,
+			  fill: {
+				gradient: ['#00b7ff', '#6600ff']
+			  }
+			}
+			$(".circle .bar").circleProgress(options).on('circle-animation-progress',
+			  function(event, progress, stepValue) {
+				$(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+			  });
+			$(".js .bar").circleProgress({
+			  value: 0.70
+			});
+			$(".react .bar").circleProgress({
+			  value: 0.60
+			});
+		  </script>
+		<!-- <div class="circlechart"
+	
+		 data-percentage="300" style="padding: 25px 8px; margin-left: -700px; margin-top: 50px; font-family: Baskerville Old Face;">
+	
+		 Flight Booking
+	
+	</div>
+	
+	 
+	
+	<div class="circlechart"
+	
+		 data-percentage="95" style="padding: 25px 8px; margin-top: -200px; margin-left: -230px; font-family: Baskerville Old Face;">
+	
+		 Amazing Tour
+	
+	</div>
+	<div class="circlechart"
+	
+		 data-percentage="50" style="padding: 25px 8px; margin-top: -200px; margin-left: 220px; font-family: Baskerville Old Face;">
+	
+		 Cruises Booking
+	
+	</div>
+	
+	 
+	
+	<div class="circlechart"
+	
+		 data-percentage="50" style="padding: 25px 8px; margin-top: -200px; margin-left: 650px; font-family: Baskerville Old Face;">
+	
+		 Ticket Booking
+	
+	</div>
+</div> -->
+	</center>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+  crossorigin="anonymous">
+</script>
+<script src="progresscircle.js"></script>
+<script>
+$(function(){
+
+	$('.circlechart').circlechart();
+  
+  });
+  </script>
+  <br><br><br><br>
+  <h2 class="og" style="font-family: Miriam Fixed; font-weight: bolder; font-size: 50px; color: #6600ff;" data-aos="fade-up">OUR<i style="color: #00b7ff;">G</i>ALLERY</h2>
+  <br><br><br><br><br>
+  <div class="conteiner" data-aos="fade-up">
+	<div class="element" style="background-image:url(ddd.jpg); height: 480px;">
+	  <div class="text"><i class="fas fa fa-solid"></i><div class="in"><p style="font-family: Aharoni; font-size: 20px;">Bhurban</p></div></div>
+	</div>
+	<div class="element" style="background-image:url(aaa.jpg); height: 480px;">
+	  <div class="text"><i class="fas fa fa-solid"></i> <div class="in"><p style="font-family: Aharoni; font-size: 20px;"> Mall Road</p></div></div>
+	</div>
+	<div class="element" style="background-image:url(bbb.jpg); height: 480px;">
+	  <div class="text"><i class="fas fa fa-solid"></i><div class="in"><p style="font-family: Aharoni; font-size: 20px;">Shigar Fort</p></div></div>
+	</div>
+	<div class="element" style="background-image:url(ccc.jpg); height: 480px;">
+	  <div class="text"><i class="fas fa fa-solid"></i><div class="in"><p style="font-family: Aharoni; font-size: 20px;">Deosai</p></div></div>
+	</div>
+	<div class="element active" style="background-image:url(world.jpeg); height: 480px;">
+	  <div class="text"><i class="fas fa fa-solid"></i><div class="in"><p style="font-family: Aharoni; font-size: 20px;">Satpara Lake</p></div></div>
+	</div>
+	
+  </div>
+  <script src="gallery.js"></script>
+  <br><br><br><br><br><br>
+  <div class="hero" data-aos="fade-up">
+	<div class="tex">
+	  <!-- <p class="text__short" style="color: #6600ff; font-size: 15px;">TOP <i style="color: #00b7ff;">D</i>ESTINATION</p> -->
+	  <h1 class="text__title" style="font-family: Miriam Fixed; font-weight: bolder; font-size: 50px; color: #6600ff;">POPULAR <br><i style="color: #00b7ff;">D</i>ESTINATION</h1>
+	  <p class="text__description" style="font-family: Baskerville Old Face;">It’s hard to imagine a more magnificent landscape than the rugged peaks, hidden villages and wind-swept plains of Pakistan. Here are 20 of the most beautiful places in Pakistan, from wild mountain passes and unreal lakes, to ornate mosques and ancient fortresses.</p>
+	  <!-- <a class="text__button"href="#">Learn more</a> -->
+	</div>
+	
+	<div class="grid__container">
+	  <div class="grid__item one"></div>
+	  <div class="grid__item two"></div>
+	  <div class="grid__item three"></div>
+	  <div class="grid__item four"></div>
+	  <div class="grid__item five"></div>
+	  <div class="grid__item six"></div>
+	  <div class="grid__item seven"></div>
+	  <div class="grid__item eight"></div>
+	  <div class="grid__item nine"></div>
+	  <div class="grid__item ten"></div>
+	  <div class="grid__item eleven"></div>
+	  <div class="grid__item twelve"></div>
+	</div>
+  </div> 
+	<!-- footer -->
+	<footer>
+		<div class="container">
+			<div class="footer-top">
+				<div class="row">
+					<div class="col-md-6 col-lg-3 about-footer">
+						<div class="boxxxx">
+						<div class="headds">
+							<h2 style="font-size: 80px;">T/G</h2>
+							<h2 style="font-size: 80px;">T/G</h2>
+						</div>
+					</div>
+						<!-- <ul>
+							<li><a href="tel:0317-1164028"><i class="fas fa-phone fa-flip-horizontal"></i>0317-1164028</a></li>
+							<li><i class="fas fa-map-marker-alt"></i>
+								1 / 105 Bay Lights,
+								<br/>Lorem Ipsum,
+								<br/>LIC 3201
+							</li>
+						</ul> -->
+						<!-- <a href="" class="btn red-btn">Book Now</a> -->
+					</div>
+					<div class="col-md-6 col-lg-2 page-more-info">
+						<div class="footer-title" style="margin-top: -30px;">
+							<h4><br> Links</h4>
+						</div>
+						<ul>
+							<li style="font-family: Aharoni;"><a href="index001.html">Home</a></li>
+							<li style="font-family: Aharoni;"><a href="about us.html">About</a></li>
+							<li style="font-family: Aharoni;"><a href="Shop.html">Shop</a></li>
+							<li style="font-family: Aharoni;"><a href="blogs.html">Blog</a></li>
+							<li style="font-family: Aharoni;"><a href="contactus.html">Contact</a></li>
+						</ul>
+					</div>
+						<div class="col-md-6 col-lg-3 page-more-info">
+						<div class="footer-title">
+							<h4>Nwes letter</h4>
+						</div>
+						<div class="ee">
+							<b><ion-icon name="mail"></ion-icon></b>
+							<input type="email" placeholder="Enter Your Email id" required>
+							<button type="submit"><b><ion-icon name="arrow-redo-circle"></b></ion-icon></button>
+						</div>
+						<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    					<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+					</div>
+					<div class="col-md-6 col-lg-4 open-hours">
+						<div class="footer-title">
+							<h4>Open hours</h4>
+							<ul class="footer-social">
+								<li><a href="" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="" target="_blank"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="" target="_blank"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="" target="_blank"><i class="fab fa-youtube"></i></a></li>
+	
+							</ul>
+						</div>
+						<table class="table" >
+							<tbody>
+								<tr>
+									<td  style="font-family: Aharoni;"><i class="far fa-clock"></i>Monday Thursday</td>
+									<td style="font-family: Miriam Fixed;">9:00am - 5:00pm</td>
+								</tr>
+								<tr>
+									<td style="font-family: Aharoni;"><i class="far fa-clock"></i>Friday</td>
+									<td style="font-family: Miriam Fixed;">9:00am - 4:00pm</td>
+								</tr>
+								<tr>
+									<td style="font-family: Aharoni;"><i class="far fa-clock"></i>Sturday</td>
+									<td style="font-family: Miriam Fixed;">9:00am - 1:30pm</td>
+								</tr>
+								<tr>
+									<td style="font-family: Aharoni;"><i class="far fa-clock"></i>Sunday</td>
+									<td style="font-family: Miriam Fixed;">9:30am - 12:00pm</td>
+								</tr>
+							</tbody>
+						</table>
+						<hr>
+						<div class="footer-logo">
+	
+						<table>
+							<tbody>
+								<tr>
+									<td><img src="pexels9.jpg" style="width: 60px; height: 80px;"></td>
+									<td><img src="pexels10.jpg" style="width: 60px; height: 80px;"></td>
+									<td><img src="pexe.jpg" style="width: 60px; height: 80px;"></td>
+									<td><img src="pexels12.jpg" style="width: 60px; height: 80px;"></td>
+									<td><img src="pexels13.jpg" style="width: 60px; height: 80px;"></td>
+							</tbody>
+						</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="footer-bottom">
+				<div class="row" style="font-family: Miriam Fixed;">
+					<div class="col-sm-4" >
+						<a href="pravicy.html">Privacy policy</a>
+					</div>
+					<div class="col-sm-8">
+						<p>TOURISTS GALORE @ 2022 All rights reserved</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Our AOS DATA -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	  AOS.init({
+		offset: 330,
+		duration: 1000,
+	  });
+	</script>
+</body>
+</html>

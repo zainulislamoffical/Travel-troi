@@ -1,0 +1,208 @@
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+        width: 15px;
+}
+::-webkit-scrollbar-track{
+    background: #6600ff;
+    border-radius: 1px;
+}
+::-webkit-scrollbar-thumb{
+    background: #00a2e2;
+    border-radius: 50px;
+}
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  
+  } */
+  
+  .container .login, .container1 .signup{
+      width: 400px;
+      height: 500px;
+      border: 2px solid #ccc;
+      position: absolute;
+      top: 29%;
+      left: 37%;
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
+      background-color: #fff;
+      border-radius: 40px;
+      transition: 1s ease-in-out;
+  }
+  
+  .container .login{
+      transform: perspective(600px) rotateY(0deg);
+  }
+  .container1 .signup{
+      transform: perspective(600px) rotateY(180deg);
+      height: 560px;
+  }
+  
+  
+  .active .login{
+      transform: perspective(600px) rotateY(-180deg);
+  }
+  .active .signup{
+      transform: perspective(600px) rotateY(0deg);
+  }
+  
+  
+  
+  .login .logo h1{
+      font-size: 80px;
+      -webkit-text-stroke: 3px;
+      -webkit-text-stroke-color: #000;
+      -webkit-text-fill-color: transparent;
+      margin-left: 25%;
+      margin-top: -1rem;
+  }
+  
+  .signup .logo h1{
+      font-size: 50px;
+      -webkit-text-stroke: 3px;
+      -webkit-text-stroke-color: #000;
+      -webkit-text-fill-color: transparent;
+      margin-left: 25%;
+      margin-top: -2rem;
+  }
+  
+  .login input, .signup input{
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      border: none;
+      border-bottom: 2px solid #000;
+      margin-top: 2rem;
+  
+  }
+  
+  .login input[type=submit], .signup input[type=submit] {
+      width: 40%;
+      height: 40px;
+      margin: 0 2px;
+      font-size: 20px;
+      font-weight: 500;
+      margin: 2rem 7rem;
+      color: #fff;
+      border: none;
+  
+  }
+   
+  .login .media, .signup .media{
+      margin-left: 2rem;
+      list-style: none;
+  }
+  
+  .login .media li, .signup .media li{
+     
+     margin: 2rem 20px;
+     padding: 5px;
+  } 
+  p{
+      margin: -1rem 3rem;
+  }
+  
+  .empty1{
+      width: 50%;
+      height: 120vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      /* background-color: #00c3ff; */
+      background:#ffffff9c url("pessss1.jpg");
+	  background-size: cover;
+	  background-repeat: no-repeat;
+	  background-blend-mode:saturation;
+      z-index: -2000;
+      transition: 1s ease-in-out;
+  }
+  
+  .empty2{
+      width: 50%;
+      height: 120vh;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      /* background-color: #00054d; */
+      background:#ffffff9c url("pessss2.jpg");
+	  background-size: cover;
+	  background-repeat: no-repeat;
+	  background-blend-mode:saturation;
+      z-index: -2000;
+      transition: 1s ease-in-out;
+      color: transparent;
+      -webkit-text-stroke-color: transparent;
+      
+  }
+  .empty .content{
+      margin-top: 35vh;
+      transition: 1s ease-in-out;
+  }
+  
+  .empty h2{
+      margin-left: 10rem;
+      font-size: 80px;
+      -webkit-text-stroke: 3px;
+      -webkit-text-stroke-color: #000;
+      -webkit-text-fill-color: transparent;
+      transition: 1s ease-in-out;
+  }
+  
+  .empty p{
+      color: black;
+      font-size: 30px;
+      transition: 1s ease-in-out;
+      font-family: "Lucida Console"  
+  }
+  .empty2 p, .empty2 h2{
+      color: transparent;
+      -webkit-text-stroke-color: transparent;
+      margin-right: 1px;
+      font-size: 30px;
+      font-family: "Lucida Console"  
+  }
+  
+  .active .empty1, .active .empty1 p, .active .empty1 h1{
+      top: 0;
+      left: 50%;
+      color: transparent;
+      -webkit-text-stroke-color: transparent;
+  }
+  
+  .active .empty2, .active .empty2 p, .active .empty2 h1{
+      top: 0;
+      left: 0;
+      color: white;
+      -webkit-text-stroke-color: #fff;
+  }
+  
+  @media(max-width: 999px){
+    .container .login{
+        width: 380px;
+        height: 500px;
+    }
+    .container1 .signup{
+        width: 380px;
+        height: 600px;
+    }
+    .empty2 p, .empty2 h2{
+      visibility: hidden;
+    }
+    .empty p{
+        visibility: hidden;
+    }
+    .empty1{
+        height: 120vh;
+    }
+    
+    .empty2{
+        height: 120vh;
+    }
+    section{
+        margin-left: -140px;
+    }
+  }

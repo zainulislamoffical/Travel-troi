@@ -1,0 +1,441 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  $blue: #2faef8;
+  $green: #28a528;
+  $grey: #f2f2f2;
+  $lightgrey: #e0e0e0;
+  $darkgrey: #333;
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  * {
+    box-sizing: border-box;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: Apercu-Regular,Calibri,sans-serif;
+    font-size: 14px;
+    color: $darkgrey;
+  }
+  
+  .nav-container {
+    background: $grey;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .container {
+      max-width: 1168px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  .nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      float: left;
+      padding: 0 10px;
+      a {
+        display: block;
+        padding: 18px 0 14px 0;
+        text-transform: uppercase;
+        font-family: Apercu-Bold,Calibri,sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+        transition: color 200ms ease-in-out;
+        &:hover, &:focus {
+          color: $blue;
+        }
+        &.active {
+          color: $blue;
+          border-bottom: solid 4px $blue;
+        }
+      }
+    }
+  }
+  
+  .filters {
+    border-radius: 0 0 4px 4px;
+    position: relative;
+    z-index: 1;
+    transform: translate(0,-350px);
+    transition: transform 200ms ease-in-out;
+    .show-quicklinks & {
+      transform: translate(0,-450px);
+    }
+    &.filters-open {
+      transform: translate(0,0);
+    }
+    * {
+      font-size: 16px;
+    }
+    background: $grey;
+    border-top: solid 1px white;
+    padding: 30px;
+    .column {
+      float: left;
+      width: 25%;
+      h3 {
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding-bottom: 10px;
+        margin: 0 30px 10px 0;
+        border-bottom: solid 1px $lightgrey;
+      }
+    }
+    .actions {
+      padding-top: 20px;
+    }
+    .quicklinks {
+      display: none;
+      padding-bottom: 10px;
+      margin-bottom: 40px;
+      border-bottom: solid 1px $lightgrey;
+      h2 {
+        margin: 0 0 20px 0;
+      }
+      a {
+        text-transform: uppercase;
+        position: relative;
+        text-decoration: none;
+        transition: color 200ms ease-in-out;
+        &:hover, &:focus {
+          color: $blue;
+          &:after {
+            right: -15px;
+            color: $blue;
+          }
+        }
+        &:after {
+          content: "\203A";
+          display: block;
+          position: absolute;
+          right: -11px;
+          top: -3px;
+          font-size: 20px;
+          transition: all 200ms ease-in-out;
+        }
+      }
+      .show-quicklinks & {
+        display: block;
+      }
+    }
+  }
+  
+  .toggle {
+    z-index: 3;
+    text-align: center;
+    font-size: 22px;
+    line-height: 40px;
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    margin-left: -40px;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background: $grey;
+    cursor: pointer;
+    transform: translate(0,0);
+    transition: transform 200ms ease-in-out;
+    i {
+      height: 100%;
+      width: 100%;
+      display: block;
+      text-align: center;
+      font-size: 22px;
+      line-height: 40px;
+      text-indent: 1px;
+      transform-origin: center center;
+      color: $darkgrey;
+      transition: all 400ms ease-in-out;
+    }
+    &:hover, &:focus {
+      i {
+        color: $blue;
+      }
+    }
+    &.toggle-open {
+      transform: translate(0,340px);
+      .show-quicklinks & {
+        transform: translate(0,440px);
+      }
+      i {
+        transform: rotate(225deg);
+        transform-origin: 50% 50%;
+      }
+    }
+    .tooltip {
+      display: none;
+      //opacity: 0.5;
+      border-radius: 0 10px 10px 10px;
+      position: absolute;
+      width: 100px;
+      padding: 5px;
+      background: $blue;
+      color: white;
+    }
+  }
+  
+  .button {
+    color: white;
+    padding: 15px 30px 11px 30px;
+    text-decoration: none;
+    border-radius: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 10px;
+    transition: all 200ms ease-in-out;
+    &.button-primary {
+      background: $green;
+      border-bottom: 4px solid $green;
+      &:hover, &:focus {
+        border-bottom: 4px solid darken($green, 5%);
+      }
+    }
+    &.button-secondary {
+      background: $darkgrey;
+      border-bottom: 4px solid $darkgrey;
+      &:hover, &:focus {
+        border-bottom: 4px solid darken($darkgrey, 10%);
+      }
+    }
+  }
+  
+  
+  // Checkbox variables
+  $checkbox-animation-ripple: 700ms;
+  $checkbox-animation-check: 0.3s;
+  
+  .filter-module--checkbox-container {
+      display: block;
+      padding: 5px 0;
+      transform: translateZ(0); // Force 3d rendering
+      label {
+          cursor: pointer;
+          padding-left: 0; // Reset for Bootstrap rule
+      }
+  
+      // Hide native checkbox
+      input[type=checkbox] {
+          opacity: 0;
+          position: absolute;
+          margin: 0;
+          z-index: -1;
+          width: 0;
+          height: 0;
+          overflow: hidden;
+          left: 0;
+          pointer-events: none;
+      }
+  
+      .filter-module--checkbox-material {
+          vertical-align: middle;
+          position: relative;
+          top: 3px;
+          &:before {
+              display: block;
+              position: absolute;
+              left: 8px;
+              top: 2px;
+              content: "";
+              background-color: rgba(0,0,0,0.5);
+              height: 4px;
+              width: 4px;
+              border-radius: 100%;
+              z-index: 1;
+              opacity: 0;
+              margin: 0;
+              //transform: scale3d(2.3, 2.3, 1);
+          }
+      }
+  
+      .filter-module--checkbox-check {
+          position: relative;
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          border: 2px solid;
+          border-radius: 2px;
+          overflow: hidden;
+          z-index: 1;
+          &:before {
+              position: absolute;
+              content: "";
+              transform: rotate(45deg);
+              display: block;
+              margin-top: -4px;
+              margin-left: 6px;
+              width: 0;
+              height: 0;
+              box-shadow:
+              0 0 0 0,
+              0 0 0 0,
+              0 0 0 0,
+              0 0 0 0,
+              0 0 0 0,
+              0 0 0 0,
+              0 0 0 0 inset;
+              animation: checkbox-off $checkbox-animation-check forwards ease-out;
+          }
+      }
+  
+      input[type=checkbox]:focus + .filter-module--checkbox-material .filter-module--checkbox-check:after {
+          opacity: 0.2;
+      }
+      input[type=checkbox]:checked + .filter-module--checkbox-material .filter-module--checkbox-check:before {
+          box-shadow:
+          0 0 0 10px,
+          10px -10px 0 10px,
+          32px 0px 0 20px,
+          0px 32px 0 20px,
+          -5px 5px 0 10px,
+          20px -12px 0 11px;
+          animation: checkbox-on $checkbox-animation-check forwards ease-out;
+      }
+  
+      input[type=checkbox]:not(:checked) + .filter-module--checkbox-material:before {
+          animation: rippleOff $checkbox-animation-ripple forwards ease-out;
+      }
+      input[type=checkbox]:checked + .filter-module--checkbox-material:before {
+          animation: rippleOn $checkbox-animation-ripple forwards ease-out;
+      }
+  
+      // Ripple effect on click
+      input[type=checkbox]:not(:checked) + .filter-module--checkbox-material .check:after {
+          animation: rippleOff $checkbox-animation-ripple forwards ease-out;
+      }
+      input[type=checkbox]:checked + .filter-module--checkbox-material .check:after {
+          animation: rippleOn $checkbox-animation-ripple forwards ease-out;
+      }
+  
+  }
+  
+  // Animations
+  @keyframes checkbox-on {
+      0% {
+          box-shadow:
+          0 0 0 10px,
+          10px -10px 0 10px,
+          32px 0px 0 20px,
+          0px 32px 0 20px,
+          -5px 5px 0 10px,
+          15px 2px 0 11px;
+      }
+      50% {
+          box-shadow:
+          0 0 0 10px,
+          10px -10px 0 10px,
+          32px 0px 0 20px,
+          0px 32px 0 20px,
+          -5px 5px 0 10px,
+          20px 2px 0 11px;
+      }
+      100% {
+          box-shadow:
+          0 0 0 10px,
+          10px -10px 0 10px,
+          32px 0px 0 20px,
+          0px 32px 0 20px,
+          -5px 5px 0 10px,
+          20px -12px 0 11px;
+      }
+  }
+  @keyframes checkbox-off {
+      0% {
+          box-shadow:
+          0 0 0 10px,
+          10px -10px 0 10px,
+          32px 0px 0 20px,
+          0px 32px 0 20px,
+          -5px 5px 0 10px,
+          20px -12px 0 11px,
+          0 0 0 0 inset;
+      }
+  
+      25% {
+          box-shadow:
+          0 0 0 10px,
+          10px -10px 0 10px,
+          32px 0px 0 20px,
+          0px 32px 0 20px,
+          -5px 5px 0 10px,
+          20px -12px 0 11px,
+          0 0 0 0 inset;
+      }
+      50% {
+          transform: rotate(45deg);
+          margin-top: -4px;
+          margin-left: 6px;
+          width: 0px;
+          height: 0px;
+          box-shadow:
+          0 0 0 10px,
+          10px -10px 0 10px,
+          32px 0px 0 20px,
+          0px 32px 0 20px,
+          -5px 5px 0 10px,
+          15px 2px 0 11px,
+          0 0 0 0 inset;
+      }
+      51% {
+          transform: rotate(0deg);
+          margin-top: -2px;
+          margin-left: -2px;
+          width: 20px;
+          height: 20px;
+          box-shadow:
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0px 0px 0 10px inset;
+      }
+      100% {
+          transform: rotate(0deg);
+          margin-top: -2px;
+          margin-left: -2px;
+          width: 20px;
+          height: 20px;
+          box-shadow:
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0px 0px 0 0px inset;
+      }
+  }
+  @keyframes rippleOn {
+      0% {
+          opacity: 0.5;
+      }
+      100% {
+          opacity: 0;
+          transform: scale(13,13);
+      }
+  }
+  @keyframes rippleOff {
+      0% {
+          opacity: 0.5;
+      }
+      100% {
+          opacity: 0;
+          transform: scale(13,13);
+      }
+  }
+  
